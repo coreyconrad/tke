@@ -5,12 +5,12 @@
  */
 
 body {
-	background-attachment: fixed;
+	/*background-attachment: fixed;
 	background-image: url("/tke/img/background.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: #464646;
+	background-size: cover;*/
+	background-color: #D6D6D6;
 	font-family: Verdana, Geneva, sans-serif;
 }
 .btn {
@@ -53,17 +53,16 @@ html{
 	height: 100px;
 }
 .navbar-nav > li > a {
-	border-bottom-color: transparent;
+	background-color: #eee;
+	border-radius: 3px;
+	display: inline-block;
 	color: black;
 	font-size: 20px; 
-	padding-top: 30px;
-	padding-bottom: 40px;
+	margin: 15px 5px 30px;
+	padding: 18px;
 }
 .navbar-nav > li > a:hover {
-	background-color: transparent;
-	border-bottom: 2px solid;
-	border-bottom-color: #CF4A47;
-	transition: border-bottom-color 200ms linear 0s;
+	background-color: #fff;
 }
 .portfolio-item {
 	background-color: #eee;
