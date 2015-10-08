@@ -27,7 +27,7 @@
 
 <body>
 
-<?php include ('include/navbar.html'); ?>
+<?php include ('/include/navbar.html'); ?>
 
 <!-- Begin Body -->
 <div class="container">
