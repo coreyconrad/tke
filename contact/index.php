@@ -28,7 +28,7 @@
 
 <body>
 
-<?php include ('http://alexgoff.net/tke/include/navbar.html'); ?>
+<?php include dirname(__FILE__)."/.../include/navbar.html"; ?>
 	
 		<!-- Content -->
 		
