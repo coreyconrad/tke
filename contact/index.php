@@ -28,7 +28,10 @@
 
 <body>
 
-<?php include dirname(__FILE__)."/.../include/navbar.html"; ?>
+<?php 	$path = $_SERVER['DOCUMENT_ROOT'];
+		$path .= "/tke/include/navbar.html";
+		include_once($path);
+)?>
 	
 		<!-- Content -->
 		
