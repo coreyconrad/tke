@@ -28,7 +28,7 @@
 
 <body>
 
-<?php include ('/include/navbar.html'); ?>
+<?php include ('/tke/include/navbar.html'); ?>
 	
 		<!-- Content -->
 		
