@@ -28,7 +28,11 @@
 
 <body>
 
-<?php include ('http://alexgoff.net/tke/include/navbar.html'); ?>
+<?php 	
+$path = $_SERVER['DOCUMENT_ROOT'];
+$path .= "/tke/include/navbar.html";
+include_once($path);
+?>
 	
 		<!-- Content -->
 		
