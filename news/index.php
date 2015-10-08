@@ -27,7 +27,7 @@
 
 <body>
 
-<?php include ('tke/include/navbar.html'); ?>
+<?php include ('http://alexgoff.net/tke/include/navbar.html'); ?>
 
 <!-- Begin Body -->
 <div class="container">
