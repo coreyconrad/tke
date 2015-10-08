@@ -3,7 +3,9 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
+* {
+	border-radius: 0px !important;
+}
 body {
 	/*background-attachment: fixed;
 	background-image: url("/tke/img/background.jpg");
@@ -11,66 +13,30 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;*/
 	background-color: #D6D6D6;
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+	height: 100%;
+	padding-top: 100px;
 }
-.btn {
-	border-radius: 0px;
-}
-.btn:hover {
-	background-color: #fff;
-	border: 1px solid #CF4A47;
-	transition: border 200ms linear 0s;
-}
-footer {
-    margin: 50px 0;
+#footer{
+	background-color: #f8f8f8;
+	bottom: 0px;
+	height: 60px;
+	padding-top: 10px;
+	position: fixed;
+	width: 100%;
 }
 html{
-	font-family: Verdana, Geneva, sans-serif;
     overflow-y: scroll;
 }
-.hero-spacer {
-    margin-top: 50px;
+.navbar-brand > img{
+	margin-top: -10px;
 }
-.hero-feature {
-    margin-bottom: 30px;
+.wrapper{
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -60px;
+	padding: 0 0 60px;
 }
-.image-float-text {
-	color: #ffffff;
-	text-decoration: underline;
-	text-shadow: 1px 1px black;
-}
-.navbar {
-	height: 100px;
-	margin-bottom: 0px;
-}
-.navbar-brand {
-	height: 100px;
-}
-.navbar-collapse {
-	height: 100px;
-}
-.navbar-header {
-	height: 100px;
-}
-.navbar-nav > li > a {
-	background-color: #eee;
-	border-radius: 3px;
-	display: inline-block;
-	color: black;
-	font-size: 20px; 
-	margin: 15px 5px 30px;
-	padding: 18px;
-}
-.navbar-nav > li > a:hover {
-	background-color: #fff;
-}
-.portfolio-item {
-	background-color: #eee;
-	border-radius: 3px;
-    margin-bottom: 25px;
-	padding: 10px 10px 10px 10px;
-}
-
 /*
 .color-primary-0 { color: #CF4A47 }Main Primary color
 .color-primary-1 { color: #FFA7A5 }

@@ -15,7 +15,7 @@
 
     <!-- Custom CSS -->
     <link href="/tke/css/tke.css" rel="stylesheet">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -28,13 +28,12 @@
 <body>
 
 <?php 	
-$path = $_SERVER['DOCUMENT_ROOT'];
-$path .= "/tke/include/navbar.html";
+$path = $_SERVER['DOCUMENT_ROOT']."/tke/include/navbar.html";
 include_once($path);
 ?>
 
 <!-- Begin Body -->
-<div class="container">
+<div class="container wrapper">
 	<div class="row">
   			<div class="col-md-3" id="leftCol">
               	
@@ -105,6 +104,12 @@ include_once($path);
   	</div>
 </div>
 
+	<!-- footer -->
+	<?php
+		$path = $_SERVER['DOCUMENT_ROOT']."/tke/include/footer.html";
+		include_once($path);
+	?>
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
@@ -112,4 +117,5 @@ include_once($path);
     <script src="/tke/js/bootstrap.min.js"></script>
 	
 	</body>
+
 </html>
