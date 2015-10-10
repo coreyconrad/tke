@@ -17,11 +17,22 @@ body {
 	height: 100%;
 	padding-top: 100px;
 }
+.fa {
+	padding: 10px 5px 10px 5px;
+}
+.fa-envelope {
+	color: #66757f !important;
+}
+.fa-facebook-official {
+	color: #3B5998 !important;
+}
+.fa-twitter-square {
+	color: #55acee !important; 
+}
 #footer{
 	background-color: #f8f8f8;
 	bottom: 0px;
 	height: 60px;
-	padding-top: 10px;
 	position: fixed;
 	width: 100%;
 }
