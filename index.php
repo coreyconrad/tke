@@ -45,6 +45,7 @@ include_once($path);
 				<div class="col-md-10 col-sm-6 col-xs-12">
 					<h1>Tau Kappa Epsilon</h1>
 					<h3>Lambda Upsilon Colony - Georgia Southern University</h3>
+					<p>Some text about who we are, what we do, where we are, where we'll be, who knows</p>
 				</div>
 			</div>
         </header>
@@ -73,7 +74,7 @@ include_once($path);
                     <div class="caption">
                         <h3>Recruitment</h3>
                         <p>
-                            <a href="#" class="btn btn-default">More Info</a>
+                            <a href="/tke/recruitment" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -85,7 +86,7 @@ include_once($path);
                     <div class="caption">
                         <h3>Philanthropy</h3>
                         <p>
-                            <a href="#" class="btn btn-default">More Info</a>
+                            <a href="/tke/philanthropy" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -97,7 +98,7 @@ include_once($path);
                     <div class="caption">
                         <h3>Learn about us</h3>
                         <p>
-                            <a href="#" class="btn btn-default">More Info</a>
+                            <a href="/tke/about" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
