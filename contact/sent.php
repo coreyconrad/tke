@@ -37,7 +37,23 @@ include_once($path);
 
 <!-- wrapper -->
 <div class="container wrapper">
-	
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<header class="jumbotron">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+						<img src="/tke/img/lu_logo.png" class="img-responsive">
+						<h2 class="text-center">Thank you for contacting us!</h2>
+						<h3 class="text-center">Re-directing to <a href="/tke">home page</a> in 5 seconds...</h3>
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</header>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
 </div>
 
 <!-- footer -->
@@ -55,3 +71,6 @@ include_once($path);
 </body>
 
 </html>
+<?php
+	header( "refresh:6; url=/tke" ); 
+?>
