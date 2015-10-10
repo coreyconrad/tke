@@ -28,7 +28,9 @@
 </head>
 
 <body>
-
+<?php
+	header( "refresh:7; url=/tke" ); 
+?>
 <!-- header -->
 <?php
 $path = $_SERVER['DOCUMENT_ROOT']."/tke/include/navbar.html";
@@ -71,6 +73,3 @@ include_once($path);
 </body>
 
 </html>
-<?php
-	header( "refresh:6; url=/tke" ); 
-?>
