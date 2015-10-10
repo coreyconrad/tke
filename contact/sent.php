@@ -28,9 +28,7 @@
 </head>
 
 <body>
-<?php
-	header( "refresh:7; url=/tke" ); 
-?>
+
 <!-- header -->
 <?php
 $path = $_SERVER['DOCUMENT_ROOT']."/tke/include/navbar.html";
@@ -69,6 +67,12 @@ include_once($path);
 
 <!-- Bootstrap Core JavaScript -->
 <script src="/tke/js/bootstrap.min.js"></script>
+
+<script>
+    setTimeout(function(){
+       window.location='/tke';
+    }, 5000);
+</script>
 
 </body>
 
