@@ -51,8 +51,8 @@ html{
 .wrapper{
 	min-height: 100%;
 	height: auto;
-	margin: 0 auto -60px;
-	padding: 0 0 60px;
+	margin-bottom: -60px;
+	padding-bottom: 60px;
 }
 /*
 .color-primary-0 { color: #CF4A47 }Main Primary color
