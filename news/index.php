@@ -82,11 +82,6 @@ include_once($path);
                 Thanks to a combined effort from our active members and our alumni, the Lambda Upsilon Colony’s philanthropy event “Save the Change for St. Jude” raised the second most money for charity in all of TKE nation and 1st among collegiate groups. We were able to raise an astounding $4,270.40 by having Greek organizations, students, faculty, alumni, active brothers, and other individuals pledge to save their change from purchases they make and donate it to St. Jude. </p>
 				<p>Thanks to the success of the philanthropy, we have decided to make “Save the Change” our annual philanthropy event to be held each spring semester. As always, our main goal is to raise as much money as possible to make sure that St. Jude’s promise, to make no family pay for cancer treatment, is fulfilled. We believe that although this was an amazing start for our philanthropy, we can raise more money for St. Jude next spring to become the #1 Chapter in TKE Nation. We would like to thank everyone who helped make this milestone possible by donating.
               	</p>
-              	<div class="row">
-              		<div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
-                  	<div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
-                  	<div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
-              	</div>
               
               	<hr>
               

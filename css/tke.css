@@ -39,8 +39,14 @@ body {
 html{
     overflow-y: scroll;
 }
+.navbar {
+	min-height: 65px;
+}
 .navbar-brand > img{
 	margin-top: -10px;
+}
+.member {
+	min-height: 500px;
 }
 .wrapper{
 	min-height: 100%;

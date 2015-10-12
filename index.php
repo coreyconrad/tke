@@ -39,16 +39,18 @@ include_once($path);
 
         <!-- Jumbotron Header -->
 		<div class="row">
-        <header class="jumbotron hero-spacer">
-			<div class="row">
-				<img class="col-md-2 col-sm-6 col-xs-12" src="img/logo.png">
-				<div class="col-md-10 col-sm-6 col-xs-12">
-					<h1>Tau Kappa Epsilon</h1>
-					<h3>Lambda Upsilon Colony - Georgia Southern University</h3>
-					<p>Some text about who we are, what we do, where we are, where we'll be, who knows</p>
-				</div>
+			<div class="col-xs-12">
+				<header class="jumbotron hero-spacer">
+					<div class="row">
+						<img class="col-md-2 col-xs-6" src="img/logo.png">
+						<div class="col-md-10 col-xs-6">
+							<h1>Tau Kappa Epsilon</h1>
+							<h2>Lambda Upsilon Colony - Georgia Southern University</h2>
+							<p>Motivated men redefining fraternity.</p>
+						</div>
+					</div>
+				</header>
 			</div>
-        </header>
 		</div>
 		
         <hr />

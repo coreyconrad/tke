@@ -35,150 +35,161 @@ include_once($path);
 	
 		<!-- Content -->
 		
-		<div class="container wrapper">
-			<div class="row">
-				<div class="col-lg-12">
-					<h1 class="page-header">Members</h1>
-				</div>
-
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Juho Lepparanta</h3>
-					<h4>Prytanis</h4>
-					<h6>Scroll Number: 574</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Jeremy Sklar</h3>
-					<h4>Epiprytanis</h4>
-					<h6>Scroll Number: 568</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="/tke/img/Members/garrett_manley.jpg" alt="">
-					</a>
-					<h3>Garrett Manley</h3>
-					<h4>Hypophetes</h4>
-					<h6>Scroll Number: 562</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Chris Hamb</h3>
-					<h4>Pylortes</h4>
-					<h6>Scroll Number: 584</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Blake Stalnaker</h3>
-					<h4>Histor</h4>
-					<h6>Scroll Number: 579</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Evan Clark</h3>
-					<h4>Hegemon</h4>
-					<h6>Scroll Number: 564</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Samuel Mason</h3>
-					<h4>Crysophylos</h4>
-					<h6>Scroll Number: 565</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Kyle Mantay</h3>
-					<h4>Grammateus</h4>
-					<h6>Scroll Number: 589</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Dylan John</h3>
-					<h6>Scroll Number: 566</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Alex Goff</h3>
-					<h6>Scroll Number: 570</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Thomas Jones</h3>
-					<h6>Scroll Number: 571</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Mathias Koeppel</h3>
-					<h6>Scroll Number: 581</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Thomas Carden</h3>
-					<h6>Scroll Number: 583</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Michael Jenkins</h3>
-					<h6>Scroll Number: 587</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Corey Conrad</h3>
-					<h6>Scroll Number: 591</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#">
-						<img class="img-responsive" src="http://placehold.it/400x300" alt="">
-					</a>
-					<h3>Josh Halaberda</h3>
-					<h6>Scroll Number: 592</h6>
-					<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
-				</div>
-			</div>
+<div class="container wrapper">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Members</h1>
 		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Juho Lepparanta</h3>
+			<h4>Prytanis</h4>
+			<h6>Scroll Number: 574</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags. extra extra extra extra extra extra extra extra extra extra extra extra extra extra extra extra extra extra extra </p>
+		</div>
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Jeremy Sklar</h3>
+			<h4>Epiprytanis</h4>
+			<h6>Scroll Number: 568</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="/tke/img/Members/garrett_manley.jpg" alt="Garrett Manley">
+			</a>
+			<h3>Garrett Manley</h3>
+			<h4>Hypophetes</h4>
+			<h6>Scroll Number: 562</h6>
+			<p>Big 'ol dummy dumb dumb who put his picture in but no text.</p>
+		</div>
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Chris Hamb</h3>
+			<h4>Pylortes</h4>
+			<h6>Scroll Number: 584</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Blake Stalnaker</h3>
+			<h4>Histor</h4>
+			<h6>Scroll Number: 579</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Evan Clark</h3>
+			<h4>Hegemon</h4>
+			<h6>Scroll Number: 564</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Samuel Mason</h3>
+			<h4>Crysophylos</h4>
+			<h6>Scroll Number: 565</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Kyle Mantay</h3>
+			<h4>Grammateus</h4>
+			<h6>Scroll Number: 589</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Dylan John</h3>
+			<h6>Scroll Number: 566</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="/tke/img/Members/alex_goff.png" alt="Alex Goff">
+			</a>
+			<h3>Alex Goff</h3>
+			<h6>Scroll Number: 570</h6>
+			<p>Senior Information Technology major, fifth joining member of the Lambda Upsilon Colony. </p>
+		</div>
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Thomas Jones</h3>
+			<h6>Scroll Number: 571</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Mathias Koeppel</h3>
+			<h6>Scroll Number: 581</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Thomas Carden</h3>
+			<h6>Scroll Number: 583</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Michael Jenkins</h3>
+			<h6>Scroll Number: 587</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Corey Conrad</h3>
+			<h6>Scroll Number: 591</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+		<div class="col-md-3 col-xs-6 thumb member">
+			<a class="thumbnail" href="#">
+				<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+			</a>
+			<h3>Josh Halaberda</h3>
+			<h6>Scroll Number: 592</h6>
+			<p>Two to four sentence piece of information about each member. Ask members to provide their own bio and copy paste inside the paragraph tags.</p>
+		</div>
+	</div>
+	<hr />
+</div>
 
 	<!-- footer -->
 	<?php
