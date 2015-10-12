@@ -68,7 +68,7 @@ include_once($path);
 			<h3>Garrett Manley</h3>
 			<h4>Hypophetes</h4>
 			<h6>Scroll Number: 562</h6>
-			<p>Big 'ol dummy dumb dumb who put his picture in but no text.</p>
+			<p>Fourth Year Computer Science Major, past prytanis of the lambda-upsilon colony.</p>
 		</div>
 		<div class="col-md-3 col-xs-6 thumb member">
 			<a class="thumbnail" href="#">
