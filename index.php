@@ -17,7 +17,7 @@
     <!-- Custom CSS -->
     <link href="css/tke.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link rel="shortcut icon" href="/tke/img/favicon.ico" />
+	<link rel="shortcut icon" href="img/favicon.ico" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,7 +31,7 @@
 <body>
 
 <?php
-$path = $_SERVER['DOCUMENT_ROOT']."/tke/include/navbar.html";
+$path = $_SERVER['DOCUMENT_ROOT']."include/navbar.html";
 include_once($path);
 ?>
 
@@ -65,7 +65,7 @@ include_once($path);
                     <div class="caption">
                         <h3>News</h3>
                         <p>
-                            <a href="/tke/news" class="btn btn-default">More Info</a>
+                            <a href="news" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ include_once($path);
                     <div class="caption">
                         <h3>Recruitment</h3>
                         <p>
-                            <a href="/tke/recruitment" class="btn btn-default">More Info</a>
+                            <a href="recruitment" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ include_once($path);
                     <div class="caption">
                         <h3>Philanthropy</h3>
                         <p>
-                            <a href="/tke/philanthropy" class="btn btn-default">More Info</a>
+                            <a href="philanthropy" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -101,7 +101,7 @@ include_once($path);
                     <div class="caption">
                         <h3>Learn about us</h3>
                         <p>
-                            <a href="/tke/about" class="btn btn-default">More Info</a>
+                            <a href="about" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -118,7 +118,7 @@ include_once($path);
 	
 	<!-- footer -->
 	<?php
-		$path = $_SERVER['DOCUMENT_ROOT']."/tke/include/footer.html";
+		$path = $_SERVER['DOCUMENT_ROOT']."include/footer.html";
 		include_once($path);
 	?>
 
@@ -126,7 +126,7 @@ include_once($path);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/tke/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
 

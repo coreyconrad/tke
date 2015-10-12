@@ -12,12 +12,12 @@
     <title>Tau Kappa Epsilon - Lambda Upsilon</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/tke/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/tke/css/tke.css" rel="stylesheet">
+    <link href="css/tke.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link rel="shortcut icon" href="/tke/img/favicon.ico" />
+	<link rel="shortcut icon" href="img/favicon.ico" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
 <body>
 
 <?php 	
-$path = $_SERVER['DOCUMENT_ROOT']."/tke/include/navbar.html";
+$path = $_SERVER['DOCUMENT_ROOT']."include/navbar.html";
 include_once($path);
 ?>
 	
@@ -63,7 +63,7 @@ include_once($path);
 		</div>
 		<div class="col-md-3 col-xs-6 thumb member">
 			<a class="thumbnail" href="#">
-				<img class="img-responsive" src="/tke/img/Members/garrett_manley.jpg" alt="Garrett Manley">
+				<img class="img-responsive" src="img/Members/garrett_manley.jpg" alt="Garrett Manley">
 			</a>
 			<h3>Garrett Manley</h3>
 			<h4>Hypophetes</h4>
@@ -131,7 +131,7 @@ include_once($path);
 		</div>
 		<div class="col-md-3 col-xs-6 thumb member">
 			<a class="thumbnail" href="#">
-				<img class="img-responsive" src="/tke/img/Members/alex_goff.png" alt="Alex Goff">
+				<img class="img-responsive" src="img/Members/alex_goff.png" alt="Alex Goff">
 			</a>
 			<h3>Alex Goff</h3>
 			<h6>Scroll Number: 570</h6>
@@ -194,7 +194,7 @@ include_once($path);
 
 	<!-- footer -->
 	<?php
-		$path = $_SERVER['DOCUMENT_ROOT']."/tke/include/footer.html";
+		$path = $_SERVER['DOCUMENT_ROOT']."include/footer.html";
 		include_once($path);
 	?>
 
@@ -202,7 +202,7 @@ include_once($path);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/tke/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
  
