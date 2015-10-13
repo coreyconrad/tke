@@ -10,8 +10,8 @@ if (!empty($_POST['contact-message'])) {
     $header = "From: admin@alexgoff.net";
     
     mail("tkegsu@gmail.com",$subject,$message,$header);
-    header('location: /tke/contact/sent.php');
+    header('location: /contact/sent.php');
 } else {
-    header('location: /tke/contact/sent.php');
+    header('location: /contact/sent.php');
 }
 ?>

@@ -12,7 +12,7 @@
     <title>Tau Kappa Epsilon - Lambda Upsilon</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/tke.css" rel="stylesheet">
@@ -30,7 +30,7 @@
 <body>
 
 <?php 	
-$path = $_SERVER['DOCUMENT_ROOT']."include/navbar.html";
+$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
 include_once($path);
 ?>
 	
@@ -40,7 +40,7 @@ include_once($path);
 			<div class="row">
 				<h1>Contact Us</h1>
 				<hr>
-				<form class="form-horizontal" role="form" method="post" action="contact/form.php">
+				<form class="form-horizontal" role="form" method="post" action="/contact/form.php">
 					<div class="form-group">
 						<label for="name" class="col-sm-2 control-label">Name</label>
 						<div class="col-sm-10">
@@ -77,7 +77,7 @@ include_once($path);
 
 	<!-- footer -->
 	<?php
-		$path = $_SERVER['DOCUMENT_ROOT']."include/footer.html";
+		$path = $_SERVER['DOCUMENT_ROOT']."/include/footer.html";
 		include_once($path);
 	?>
 
@@ -85,7 +85,7 @@ include_once($path);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
 </body>
 </html>

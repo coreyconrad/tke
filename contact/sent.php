@@ -12,10 +12,10 @@
     <title>Tau Kappa Epsilon - Lambda Upsilon</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/tke/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/tke/css/tke.css" rel="stylesheet">
+    <link href="/css/tke.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,7 +31,7 @@
 
 <!-- header -->
 <?php
-$path = $_SERVER['DOCUMENT_ROOT']."/tke/include/navbar.html";
+$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
 include_once($path);
 ?>
 
@@ -44,7 +44,7 @@ include_once($path);
 				<div class="row">
 					<div class="col-md-3"></div>
 					<div class="col-md-6">
-						<img src="/tke/img/lu_logo.png" class="img-responsive">
+						<img src="/img/lu_logo.png" class="img-responsive">
 						<h2 class="text-center">Thank you for contacting us!</h2>
 						<h3 class="text-center">Re-directing to <a href="/tke">home page</a> in 5 seconds...</h3>
 					</div>
@@ -58,7 +58,7 @@ include_once($path);
 
 <!-- footer -->
 <?php
-	$path = $_SERVER['DOCUMENT_ROOT']."/tke/include/footer.html";
+	$path = $_SERVER['DOCUMENT_ROOT']."/include/footer.html";
 	include_once($path);
 ?>
 
@@ -66,11 +66,11 @@ include_once($path);
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="/tke/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
 <script>
     setTimeout(function(){
-       window.location='/tke';
+       window.location='/';
     }, 5000);
 </script>
 

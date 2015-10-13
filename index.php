@@ -12,12 +12,12 @@
     <title>Tau Kappa Epsilon - Lambda Upsilon</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/tke.css" rel="stylesheet">
+    <link href="/css/tke.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link rel="shortcut icon" href="img/favicon.ico" />
+	<link rel="shortcut icon" href="/img/favicon.ico" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,7 +31,7 @@
 <body>
 
 <?php
-$path = $_SERVER['DOCUMENT_ROOT']."include/navbar.html";
+$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
 include_once($path);
 ?>
 
@@ -118,7 +118,7 @@ include_once($path);
 	
 	<!-- footer -->
 	<?php
-		$path = $_SERVER['DOCUMENT_ROOT']."include/footer.html";
+		$path = $_SERVER['DOCUMENT_ROOT']."/include/footer.html";
 		include_once($path);
 	?>
 
@@ -126,7 +126,7 @@ include_once($path);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
 </body>
 
