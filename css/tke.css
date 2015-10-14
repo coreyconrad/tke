@@ -3,6 +3,15 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+@font-face {
+	font-family: 'Aleo';
+		src: url('/fonts/aleo-regular-webfont.eot'); /* IE9 Compat Modes */
+		src: url('/fonts/aleo-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('/fonts/aleo-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+			url('/fonts/aleo-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+			url('/fonts/aleo-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+			url('/fonts/aleo-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
 * {
 	border-radius: 0px !important;
 }
@@ -13,7 +22,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;*/
 	background-color: #D6D6D6;
-	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+	font-family: 'Aleo',‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 	height: 100%;
 	padding-top: 100px;
 }
