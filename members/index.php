@@ -194,7 +194,7 @@ include_once($path);
 
 	<!-- footer -->
 	<?php
-		$path = $_SERVER['DOCUMENT_ROOT']."include/footer.html";
+		$path = $_SERVER['DOCUMENT_ROOT']."/include/footer.html";
 		include_once($path);
 	?>
 

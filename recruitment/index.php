@@ -37,7 +37,11 @@ include_once($path);
 
 <!-- wrapper -->
 <div class="container wrapper">
-	
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Recruitment</h1>
+		</div>
+	</div>
 </div>
 
 <!-- footer -->

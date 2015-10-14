@@ -4,10 +4,14 @@ if (!empty($_POST['contact-message'])) {
     $email = $_POST['contact-email'];
     $phone = $_POST['contact-phone'];
     $text = $_POST['contact-message'];
-    
-    $subject = "Message from: ".$name;
+	$topic = $_POST['contact-topic'];
+	if (!empty($topic)) {
+		$subject = "Message from: ".$name." about ".$topic;
+	} else {
+		$subject = "Message from: ".$name;
+	}
     $message = $text."\r\nEmail: ".$email."\r\nPhone: ".$phone."\r\nMessage sent from tkegsu.com";
-    $header = "From: admin@alexgoff.net";
+    $header = "From: admin@tkegsu.com";
     
     mail("tkegsu@gmail.com",$subject,$message,$header);
     header('location: /contact/sent.php');

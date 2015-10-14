@@ -15,6 +15,10 @@
 * {
 	border-radius: 0px !important;
 }
+article {
+	background-color: #eee;
+	padding-bottom: 15px;
+}
 body {
 	/*background-attachment: fixed;
 	background-image: url("/tke/img/background.jpg");
@@ -45,8 +49,21 @@ body {
 	position: fixed;
 	width: 100%;
 }
+h1, h2 {
+	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+}
 html{
     overflow-y: scroll;
+}
+.hr-dark {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	height: 1px;
+	background: #333;
+}
+.jumbotron p {
+	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 }
 .navbar {
 	min-height: 65px;
