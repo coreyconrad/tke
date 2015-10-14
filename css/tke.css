@@ -5,12 +5,12 @@
  */
 @font-face {
 	font-family: 'Aleo';
-		src: url('/fonts/aleo-regular-webfont.eot'); /* IE9 Compat Modes */
-		src: url('/fonts/aleo-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			url('/fonts/aleo-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-			url('/fonts/aleo-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-			url('/fonts/aleo-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-			url('/fonts/aleo-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+		src: url('/fonts/Aleo-Regular.eot'); /* IE9 Compat Modes */
+		src: url('/fonts/Aleo-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('/fonts/Aleo-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+			url('/fonts/Aleo-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+			url('/fonts/Aleo-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+			url('/fonts/Aleo-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 * {
 	border-radius: 0px !important;
