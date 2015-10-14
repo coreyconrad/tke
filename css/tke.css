@@ -30,6 +30,9 @@ body {
 	height: 100%;
 	padding-top: 100px;
 }
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
 .fa {
 	padding: 10px 5px 10px 5px;
 }
