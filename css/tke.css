@@ -4,13 +4,13 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 @font-face {
-	font-family: 'Aleo';
-		src: url('/fonts/Aleo-Regular.eot'); /* IE9 Compat Modes */
-		src: url('/fonts/Aleo-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			url('/fonts/Aleo-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-			url('/fonts/Aleo-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-			url('/fonts/Aleo-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-			url('/fonts/Aleo-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-family: 'Merriweather';
+		src: url('/fonts/Merriweather-Regular.eot'); /* IE9 Compat Modes */
+		src: url('/fonts/Merriweather-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('/fonts/Merriweather-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+			url('/fonts/Merriweather-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+			url('/fonts/Merriweather-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+			url('/fonts/Merriweather-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 * {
 	border-radius: 0px !important;
@@ -20,13 +20,9 @@ article {
 	padding-bottom: 15px;
 }
 body {
-	/*background-attachment: fixed;
-	background-image: url("/img/background.jpg");
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;*/
+	background-image: url("/img/background.png");
 	background-color: #f0f0f0;
-	font-family: Aleo,‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+	font-family: Merriweather,‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 	height: 100%;
 	padding-top: 100px;
 }
@@ -41,6 +37,9 @@ body {
 .fa {
 	padding: 10px 5px 10px 5px;
 }
+.fa:hover {
+	color: #f0f0f0 !important;
+}
 .fa-envelope {
 	color: #e0e0e0 !important;
 }
@@ -53,9 +52,12 @@ body {
 #footer{
 	background-color: #b74634;
 	bottom: 0px;
+    box-shadow: 0 -7px 3px -6px #999;
 	height: 60px;
 	position: fixed;
 	width: 100%;
+    -webkit-box-shadow: 0 -7px 3px -6px #999;
+    -moz-box-shadow: 0 -7px 3px -6px #999;
 }
 h1, h2 {
 	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
@@ -64,7 +66,7 @@ html{
     overflow-y: scroll;
 }
 hr {
-	border-top: 1px solid #e0e0e0;
+	border-top: 1px solid #808080;
 }
 .hr-dark {
 	margin-top: 20px;
@@ -89,7 +91,10 @@ hr {
 }
 .navbar {
 	background-color: #b74634;
+    box-shadow: 0 8px 3px -6px #999;
 	min-height: 65px;
+    -webkit-box-shadow: 0 8px 3px -6px #999;
+    -moz-box-shadow: 0 8px 3px -6px #999;
 }
 .navbar-brand > img{
 	margin-top: -10px;
@@ -98,7 +103,11 @@ hr {
 	border: 0px;
 }
 .navbar-default .navbar-nav > li > a {
-	color: #e0e0e0;
+	color: #f0f0f0;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+	background-color: #c45341;
+	color: #f0f0f0;
 }
 .navbar-default .navbar-nav > li > a:hover {
 	background-color: #c45341;
