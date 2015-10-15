@@ -33,18 +33,16 @@
 $path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
 include_once($path);
 
-$user = 'tkegsuco_admin';
+/*$user = 'tkegsuco_admin';
 $pass = '!Ambd-688%';
 
-/*$db = new PDO('mysql:host=localhost;dbname=tkegsuco_info', $user, $pass);
+$db = new PDO('mysql:host=localhost;dbname=tkegsuco_info', $user, $pass);
 $sql = "SELECT * FROM members";
 $query = $db -> prepare($sql);
 $query -> execute();
 $results = $query -> fetchAll(PDO::FETCH_ASSOC);
 
 print_r($results);*/
-
-echo "testing";
 
 $path = $_SERVER['DOCUMENT_ROOT']."/include/footer.html";
 include_once($path);
