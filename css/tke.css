@@ -21,29 +21,37 @@ article {
 }
 body {
 	/*background-attachment: fixed;
-	background-image: url("/tke/img/background.jpg");
+	background-image: url("/img/background.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;*/
-	background-color: #D6D6D6;
+	background-color: #f0f0f0;
 	font-family: Aleo,‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 	height: 100%;
 	padding-top: 100px;
+}
+.btn-primary,.btn-default{
+	background-color: #577492;
+	color: #e0e0e0;
+}
+.btn-primary:hover,.btn-default:hover{
+	background-color: #67829e;
+	color: #f0f0f0;
 }
 .fa {
 	padding: 10px 5px 10px 5px;
 }
 .fa-envelope {
-	color: #66757f !important;
+	color: #e0e0e0 !important;
 }
 .fa-facebook-official {
-	color: #3B5998 !important;
+	color: #e0e0e0 !important;
 }
 .fa-twitter-square {
-	color: #55acee !important; 
+	color: #e0e0e0 !important; 
 }
 #footer{
-	background-color: #f8f8f8;
+	background-color: #b74634;
 	bottom: 0px;
 	height: 60px;
 	position: fixed;
@@ -55,6 +63,9 @@ h1, h2 {
 html{
     overflow-y: scroll;
 }
+hr {
+	border-top: 1px solid #e0e0e0;
+}
 .hr-dark {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -62,23 +73,42 @@ html{
 	height: 1px;
 	background: #333;
 }
+.jumbotron {
+	background-color: #e0e0e0;
+}
 .jumbotron p {
 	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 }
 .login {
+	color: #e0e0e0;
 	margin-top: 20px;
 }
-.modal-open[style] {
-padding-right: 0px !important;
+.login:hover {
+	color: #f0f0f0;
+	text-decoration: none;
 }
 .navbar {
+	background-color: #b74634;
 	min-height: 65px;
 }
 .navbar-brand > img{
 	margin-top: -10px;
 }
+.navbar-default {
+	border: 0px;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #e0e0e0;
+}
+.navbar-default .navbar-nav > li > a:hover {
+	background-color: #c45341;
+	color: #f0f0f0;
+}
 .member {
 	min-height: 500px;
+}
+.thumbnail {
+	background-color: #e0e0e0;
 }
 .wrapper{
 	min-height: 100%;
