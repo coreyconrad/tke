@@ -151,7 +151,7 @@ include_once($path);
 			</a>
 			<h3>Mathias Koeppel</h3>
 			<h6>Scroll Number: 581</h6>
-			<p></p>
+			<p>Senior Information Technology student, Mathias focuses his attention on web software and applications. Currently employed as a teachers assistant for multiple web technology classes and development. He takes pleasure in dendrology while maintaining a clear affirmative on the technology that surrounds us daily. He hopes to someday work as an administrator of computer systems in a hospital.</p>
 		</div>
 	</div>
 	<hr />
