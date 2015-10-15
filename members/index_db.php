@@ -40,7 +40,7 @@ $db = new PDO('mysql:host=localhost;dbname=tkegsuco_info', $user, $pass);
 $sql = "SELECT * FROM members";
 $query = $db -> prepare($sql);
 $query -> execute();
-$results = $query -> fetchAll(PDO::FETCH_ASSOC)
+$results = $query -> fetchAll(PDO::FETCH_ASSOC);
 
 print_r($results);
 
