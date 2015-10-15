@@ -40,20 +40,27 @@ include_once($path);
               	
 				<div class="well"> 
               	<ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="#sec1">Fall 2015 Candidates</a></li>
-                  <li><a href="#sec2">Philanthropy</a></li>
-                  <li><a href="#sec3">New Officers & Chairmen</a></li>
+                    <li><a href="#sec1">Homecoming Announcement</a></li>
+                    <li><a href="#sec2">Fall 2015 Candidates</a></li>
+                    <li><a href="#sec3">Philanthropy</a></li>
+                    <li><a href="#sec4">New Officers & Chairmen</a></li>
               	</ul>
   				</div>
 
       		</div>  
       		<div class="col-md-9">
-
-              	<h2 id="sec0">Colony News: October 2015</h2>
+                <h2 id="sec0">Colony News: October 2015</h2>
+                
+                <hr>
+              
+              	<h2 id="sec1">Homecoming Announcement</h2>
+                <h4>Updated: Oct. 12th</h4>
+              	<p>
+                The homecoming tailgate will be hosted at The Hamptons Statesboro, #227. If you haven't visited Statesboro in the last year, get in touch and we'll make sure you know where to go!</p>
        	           
               	<hr class="col-md-12">
 
-              	<h2 id="sec1">Fall 2015 Candidate Class</h2>
+              	<h2 id="sec2">Fall 2015 Candidate Class</h2>
               	<p>
                 This fall’s IFC rush brought about a group of engaged men who are ready to change the negative stigma of fraternity life and propel this colony to its chartering goal. The picture above was taken shortly after our first induction ceremony of the semester. Candidates Will Baker, Zhane Roberts, Kyle Brown, Daniel Walton, Ryan Wilcauskas, Russell Burrell and Jeffrey Toler were the first to be inducted.</p> 
 				<p>We are currently in the process of scheduling our second induction of this semester in which we will induct three more candidates: Jordan Reep, Bradley Kostensky, and Angelo Grisby. In the meantime, each candidate will be working with their assigned big brothers to fulfill the new member education program in order to be initiated into the fraternity. We have big expectations for this class of individuals who have already proven that they are excited about TKE and eager to be a part of it.</p>
@@ -78,7 +85,7 @@ include_once($path);
               
               	<hr>
               
-              	<h2 id="sec2">Philanthropy</h2>
+              	<h2 id="sec3">Philanthropy</h2>
               	<p>
                 Thanks to a combined effort from our active members and our alumni, the Lambda Upsilon Colony’s philanthropy event “Save the Change for St. Jude” raised the second most money for charity in all of TKE nation and 1st among collegiate groups. We were able to raise an astounding $4,270.40 by having Greek organizations, students, faculty, alumni, active brothers, and other individuals pledge to save their change from purchases they make and donate it to St. Jude. </p>
 				<p>Thanks to the success of the philanthropy, we have decided to make “Save the Change” our annual philanthropy event to be held each spring semester. As always, our main goal is to raise as much money as possible to make sure that St. Jude’s promise, to make no family pay for cancer treatment, is fulfilled. We believe that although this was an amazing start for our philanthropy, we can raise more money for St. Jude next spring to become the #1 Chapter in TKE Nation. We would like to thank everyone who helped make this milestone possible by donating.
@@ -86,7 +93,7 @@ include_once($path);
               
               	<hr>
               
-              	<h2 id="sec3">New Officers</h2>
+              	<h2 id="sec4">New Officers</h2>
 				<p>
       			Upon the transfer of Frater Caleb Hunter, our Epiprytanis position became vacant. Frater Jeremy Sklar, formerly the Grammateus, served as interim Epiprytanis and was officially elected to the role earlier this semester. Elections were then held for the newly vacated Grammateus position in which Frater Kyle Mantay was the victor. Both fraters will serve as officers in their respective positions until the end of the semester.
                 </p>
