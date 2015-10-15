@@ -49,6 +49,11 @@ include_once($path);
 	$path = $_SERVER['DOCUMENT_ROOT']."/include/footer.html";
 	include_once($path);
 ?>
+	
+	<?php
+		$path = $_SERVER['DOCUMENT_ROOT']."/include/login.html";
+		include_once($path);
+	?>
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

@@ -83,6 +83,11 @@ html{
 	margin-bottom: -60px;
 	padding-bottom: 60px;
 }
+
+.login {
+	margin-top: 20px;
+}
+
 /*
 .color-primary-0 { color: #CF4A47 }Main Primary color
 .color-primary-1 { color: #FFA7A5 }

@@ -27,31 +27,36 @@
 
 </head>
 
-<body>
+	<body>
 
-<!-- header -->
-<?php
-$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
-include_once($path);
-?>
+		<!-- header -->
+		<?php
+		$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
+		include_once($path);
+		?>
 
-<!-- wrapper -->
-<div class="container wrapper">
-	
-</div>
+		<!-- wrapper -->
+		<div class="container wrapper">
 
-<!-- footer -->
-<?php
-	$path = $_SERVER['DOCUMENT_ROOT']."/include/footer.html";
-	include_once($path);
-?>
+		</div>
 
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<!-- footer -->
+		<?php
+			$path = $_SERVER['DOCUMENT_ROOT']."/include/footer.html";
+			include_once($path);
+		?>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
+		<?php
+			$path = $_SERVER['DOCUMENT_ROOT']."/include/login.html";
+			include_once($path);
+		?>
 
-</body>
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="/js/bootstrap.min.js"></script>
+
+	</body>
 
 </html>
