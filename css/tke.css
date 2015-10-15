@@ -30,9 +30,6 @@ body {
 	height: 100%;
 	padding-top: 100px;
 }
-.dropdown:hover .dropdown-menu {
-	display: block;
-}
 .fa {
 	padding: 10px 5px 10px 5px;
 }
@@ -68,6 +65,12 @@ html{
 .jumbotron p {
 	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 }
+.login {
+	margin-top: 20px;
+}
+.modal-open[style] {
+padding-right: 0px !important;
+}
 .navbar {
 	min-height: 65px;
 }
@@ -83,11 +86,6 @@ html{
 	margin-bottom: -60px;
 	padding-bottom: 60px;
 }
-
-.login {
-	margin-top: 20px;
-}
-
 /*
 .color-primary-0 { color: #CF4A47 }Main Primary color
 .color-primary-1 { color: #FFA7A5 }

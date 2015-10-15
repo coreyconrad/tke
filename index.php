@@ -43,8 +43,8 @@ include_once($path);
 			<div class="col-xs-12">
 				<header class="jumbotron hero-spacer">
 					<div class="row">
-						<img class="col-md-2 col-xs-6" src="img/logo.png">
-						<div class="col-md-10 col-xs-6">
+						<img class="col-md-3 col-sm-6 hidden-xs" src="img/logo.png">
+						<div class="col-md-9 col-sm-6 col-xs-12">
 							<h1>Tau Kappa Epsilon</h1>
 							<h2>Lambda Upsilon Colony - Georgia Southern University</h2>
 							<p>Motivated men redefining fraternity.</p>
@@ -119,11 +119,6 @@ include_once($path);
 	<!-- footer -->
 	<?php
 		$path = $_SERVER['DOCUMENT_ROOT']."/include/footer.html";
-		include_once($path);
-	?>
-	
-	<?php
-		$path = $_SERVER['DOCUMENT_ROOT']."/include/login.html";
 		include_once($path);
 	?>
 
