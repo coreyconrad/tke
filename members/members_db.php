@@ -36,9 +36,9 @@
 	//define database informaiton
 	$dsn = 'mysql:dbname=tkegsuco_info;host=localhost;';
 	//database username, this will need to be changed
-	$username = 'root';
+	$username = 'tkegsuco_admin';
 	//database password, this will need to be changed
-	$password = 'dev1';
+	$password = '!Ambd-688%';
 	//put colcount up here, it can go lower
 	$colCount = 0;
 	
@@ -46,7 +46,7 @@
 		try {
 			$db = new PDO($dsn, $username, $password); // also allows an extra parameter of configuration
 		} catch(PDOException $e) {
-			die('Could not connect to the database:<br/>' . $e);
+			die('Could not connect to the database.');
 		}
 	
 	//create a new SQL query to select all members
