@@ -78,7 +78,31 @@ foreach ($results as $row) {
 		echo "<div class='row'>";
 	}
 	
+	//enter officers with a for loop for all 8 positions
+	
+	if ($position = "Prytanis" || $position = "Epiprytanis" ||
+	   $position = "Grammateus" || $position = "Crysophylos" ||
+	   $position = "Histor" || $position = "Hypophetes" ||
+	   $position = "Pylortes" || $position = "Hegemon") {
+		
+		echo "
+		<div class='col-md-3 col-xs-6 thumb member'>
+			<a class='thumbnail' href='#'>
+				<img class='img-responsive' src=".$img." alt='profile picture'>
+			</a>
+			<h3>".$m_id."</h3>
+			<h4>".$position."</h4>
+			<h6>Scroll Number: ".$scroll_num."</h6>
+			<p>".$blurb."</p>
+		</div>	
+	";
+	//increment column count by one
+	$colCount++;
+	}
+	
+	
 	//echo HTML with variables concatenated
+	//  !! Need to exclude Offices!  !!
 	echo "
 		<div class='col-md-3 col-xs-6 thumb member'>
 			<a class='thumbnail' href='#'>
