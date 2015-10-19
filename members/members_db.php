@@ -69,10 +69,10 @@
 //entering info for the officers
 foreach ($results as $row) {
 	
-	if($position == "Prytanis" || $position == "Prytanis" || 
-	   $position == "Prytanis" || $position == "Prytanis" || 
-	   $position == "Prytanis" || $position == "Prytanis" || 
-	   $position == "Prytanis" || $position == "Prytanis") {
+	if($position == "Prytanis" || $position == "Epiprytanis" || 
+	   $position == "Grammateus" || $position == "Crysophylos" || 
+	   $position == "Histor" || $position == "Hypophetes" || 
+	   $position == "Pylortes" || $position == "Hegemon") {
 	
 			//store array values for easy concatenation. Also I don't think you can concatenate array values.
 			$m_id = $row['member_id'];
