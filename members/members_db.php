@@ -65,6 +65,8 @@
 		
 <?php
 //begin foreach loop by storing results in individual row arrays
+	
+//entering info for the officers
 foreach ($results as $row) {
 	//store array values for easy concatenation. Also I don't think you can concatenate array values.
 	$m_id = $row['member_id'];
@@ -76,16 +78,10 @@ foreach ($results as $row) {
 	//if no columns have been entered, insert a new row
 	if ($colCount==0) {
 		echo "<div class='row'>";
-	}
+	}	
 	
-	//enter officers with a for loop for all 8 positions
-	
-	if ($position = "Prytanis" || $position = "Epiprytanis" ||
-	   $position = "Grammateus" || $position = "Crysophylos" ||
-	   $position = "Histor" || $position = "Hypophetes" ||
-	   $position = "Pylortes" || $position = "Hegemon") {
-		
-		echo "
+	//echo HTML with variables concatenated
+	echo "
 		<div class='col-md-3 col-xs-6 thumb member'>
 			<a class='thumbnail' href='#'>
 				<img class='img-responsive' src=".$img." alt='profile picture'>
@@ -98,11 +94,43 @@ foreach ($results as $row) {
 	";
 	//increment column count by one
 	$colCount++;
+	//if the column count is divisible by 4 and the column count equals the total rows queried, this is the last column of the last row
+	if ($colCount % 4 == 0 && $colCount==$rowCount) {
+		echo "
+			</div>
+			<hr />
+		";
+	//if the column count is not divisible by 4 but the column count equals the total rows queried, this is the last column but the row is not full
+	} elseif ($colCount==$rowCount) {
+		echo "
+			</div>
+			<hr />
+		";
+	//if the column count is divisible by 4, the end of the row has been reached and a new one is opened
+	} elseif ($colCount % 4 == 0) {
+		echo "
+			</div>
+			<hr />
+			<div class='row'>
+		";		
 	}
+}
 	
+// enter info for non-offices
+foreach ($results as $row) {
+	//store array values for easy concatenation. Also I don't think you can concatenate array values.
+	$m_id = $row['member_id'];
+	$scroll_num = $row['scroll_num'];
+	$blurb = $row['blurb'];
+	$position = $row['position'];
+	$img = $row['img_path'];
+	
+	//if no columns have been entered, insert a new row
+	if ($colCount==0) {
+		echo "<div class='row'>";
+	}	
 	
 	//echo HTML with variables concatenated
-	//  !! Need to exclude Offices!  !!
 	echo "
 		<div class='col-md-3 col-xs-6 thumb member'>
 			<a class='thumbnail' href='#'>
