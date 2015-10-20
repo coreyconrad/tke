@@ -17,22 +17,33 @@
 }
 article {
 	background-color: #eee;
+	box-shadow: 0 8px 4px -6px #999;
 	padding-bottom: 15px;
+    -moz-box-shadow: 0 8px 4px -6px #999;
+    -webkit-box-shadow: 0 8px 4px -6px #999;
 }
 body {
-	background-image: url("/img/background.png");
+	background-attachment: fixed;
 	background-color: #f0f0f0;
+	background-image: url("/img/background.png");
 	font-family: Merriweather,‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 	height: 100%;
 	padding-top: 100px;
 }
 .btn-primary,.btn-default{
 	background-color: #577492;
+    box-shadow: 0 7px 4px -6px #999;
+	border: 0px;
 	color: #e0e0e0;
+    -moz-box-shadow: 0 7px 4px -6px #999;
+    -webkit-box-shadow: 0 7px 4px -6px #999;
 }
 .btn-primary:hover,.btn-default:hover{
 	background-color: #67829e;
+    box-shadow: 0 6px 4px -6px #999;
 	color: #f0f0f0;
+    -moz-box-shadow: 0 6px 4px -6px #999;
+    -webkit-box-shadow: 0 6px 4px -6px #999;
 }
 .fa {
 	padding: 10px 5px 10px 5px;
@@ -56,8 +67,8 @@ body {
 	height: 60px;
 	position: fixed;
 	width: 100%;
-    -webkit-box-shadow: 0 -7px 3px -6px #999;
     -moz-box-shadow: 0 -7px 3px -6px #999;
+    -webkit-box-shadow: 0 -7px 3px -6px #999;
 }
 h1, h2 {
 	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
@@ -77,6 +88,9 @@ hr {
 }
 .jumbotron {
 	background-color: #e0e0e0;
+    box-shadow: 0 8px 4px -6px #999;
+    -moz-box-shadow: 0 8px 4px -6px #999;
+    -webkit-box-shadow: 0 8px 4px -6px #999;
 }
 .jumbotron p {
 	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
@@ -91,10 +105,10 @@ hr {
 }
 .navbar {
 	background-color: #b74634;
-    box-shadow: 0 8px 3px -6px #999;
+    box-shadow: 0 8px 4px -6px #999;
 	min-height: 65px;
-    -webkit-box-shadow: 0 8px 3px -6px #999;
-    -moz-box-shadow: 0 8px 3px -6px #999;
+    -webkit-box-shadow: 0 8px 4px -6px #999;
+    -moz-box-shadow: 0 8px 4px -6px #999;
 }
 .navbar-brand > img{
 	margin-top: -10px;
@@ -116,8 +130,21 @@ hr {
 .member {
 	min-height: 500px;
 }
+.panel {
+	box-shadow: 0 8px 4px -6px #999;
+    -moz-box-shadow: 0 8px 4px -6px #999;
+    -webkit-box-shadow: 0 8px 4px -6px #999;
+}
 .thumbnail {
 	background-color: #e0e0e0;
+    box-shadow: 0 8px 4px -6px #999;
+    -moz-box-shadow: 0 8px 4px -6px #999;
+    -webkit-box-shadow: 0 8px 4px -6px #999;
+}
+.well {
+    box-shadow: 0 8px 4px -6px #999;
+    -moz-box-shadow: 0 8px 4px -6px #999;
+    -webkit-box-shadow: 0 8px 4px -6px #999;	
 }
 .wrapper{
 	min-height: 100%;
