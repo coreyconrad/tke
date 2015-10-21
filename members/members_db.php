@@ -33,14 +33,12 @@
 	$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
 	include_once($path);
 	
-	//define database informaiton
-	$dsn = 'mysql:dbname=tkegsuco_info;host=localhost;';
-	//database username, this will need to be changed
-	$username = 'tkegsuco_admin';
-	//database password, this will need to be changed
-	$password = '!Ambd-688%';
+	$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
+	include_once($path);
+		
+	pdo_open();
+	
 	//put colcount up here, it can go lower
-	///////////////////////////////////////
 	$colCount = 0;
 	
 		//attempt to open connection, if connection is not available then give an error
