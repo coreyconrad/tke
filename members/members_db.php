@@ -36,21 +36,7 @@
 	$path = $_SERVER['DOCUMENT_ROOT']."/include/functions.php";
 	include_once($path);
 	
-	//define database informaiton
-	$dsn = 'mysql:dbname=tkegsuco_info;host=localhost;';
-	//database username, this will need to be changed
-	$username = 'tkegsuco_admin';
-	//database password, this will need to be changed
-	$password = '!Ambd-688%';
-	//put colcount up here, it can go lower
-	$colCount = 0;
-	
-		//attempt to open connection, if connection is not available then give an error
-		try {
-			$db = new PDO($dsn, $username, $password); // also allows an extra parameter of configuration
-		} catch(PDOException $e) {
-			die('Could not connect to the database.');
-		}
+	db_read();
 	
 	//create a new SQL query to select all members
 	$stmt = $db->query('SELECT users.first_name, users.last_name, members.scroll_num,
