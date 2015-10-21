@@ -32,7 +32,8 @@
 <?php 	
 	$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
 	include_once($path);
-	
+?>
+<?php
 	$path = $_SERVER['DOCUMENT_ROOT']."/include/functions.php";
 	include_once($path);
 ?>
