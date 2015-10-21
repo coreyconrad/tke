@@ -47,25 +47,25 @@ function member_output() {
 				<p>".$blurb."</p>
 			</div>	
 		";
-        echo $row;
         
 		//increment column count by one
 		$colCount++;
         
 		//if the column count is divisible by 4 and the column count equals the total rows queried, this is the last column of the last row
-		if ($colCount % 4 == 0 && $colCount==$row) {
-			echo "
-				</div>
-				<hr />
-			";
-		//if the column count is not divisible by 4 but the column count equals the total rows queried, this is the last column but the row is not full
-		} elseif ($colCount==$row) {
+		if ($colCount % 4 == 0 && $colCount==$rowCount) {
 			echo "
 				</div>
 				<hr />
 			";
 		//if the column count is divisible by 4, the end of the row has been reached and a new one is opened
 		} elseif ($colCount % 4 == 0) {
+			echo "
+				</div>
+				<hr />
+				<div class='row'>
+			";
+		//if the column count is not divisible by 4 but the column count equals the total rows queried, this is the last column but the row is not full
+		} elseif ($colCount % 4 != 0 && $colCount==$rowCount) {
 			echo "
 				</div>
 				<hr />

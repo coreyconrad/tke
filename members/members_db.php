@@ -33,7 +33,7 @@
 	$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
 	include_once($path);
 	
-	$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
+	$path = $_SERVER['DOCUMENT_ROOT']."/include/functions.php";
 	include_once($path);
 		
 	pdo_open_read();
