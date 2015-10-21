@@ -1,6 +1,7 @@
 <?php
 
 function pdo_open_read() {
+    global $db;
 	//define database informaiton
 	$dsn = 'mysql:dbname=tkegsuco_info;host=localhost;';
 	//database username, this will need to be changed
@@ -12,15 +13,17 @@ function pdo_open_read() {
     try {
         $db = new PDO($dsn, $username, $password);
     } catch(PDOException $e) {
-        die('Could not connect to the database.');
+        echo "Could not establish database connection.";
     }
 }
 
 function member_output() {
+    global $results;
+    global $rowCount;
     //number of columns
     $colCount = 0;
     
-	//begin foreach loop by storing results in individual row arrays	
+	//begin foreach loop by storing results in individual row arrays
 	foreach ($results as $row) {
 		//store array values for easy concatenation. Also I don't think you can concatenate array values.
 		$first = $row['first_name'];
@@ -69,7 +72,6 @@ function member_output() {
 			echo "
 				</div>
 				<hr />
-				<div class='row'>
 			";		
 		}
 	}    

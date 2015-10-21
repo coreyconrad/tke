@@ -35,7 +35,10 @@
 	
 	$path = $_SERVER['DOCUMENT_ROOT']."/include/functions.php";
 	include_once($path);
-		
+	
+	global $rowCount;
+	global $results;
+	
 	pdo_open_read();
 	
 	//create a new SQL query to select all members
@@ -56,11 +59,11 @@
 			<h1 class="page-header">Members</h1>
 		</div>
 	</div>
-		
+	
 <?php
 
-member_output();
-
+	member_output();
+	
 ?>
 
 </div>
