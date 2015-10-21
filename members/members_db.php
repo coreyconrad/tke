@@ -36,20 +36,7 @@
 	$path = $_SERVER['DOCUMENT_ROOT']."/include/functions.php";
 	include_once($path);
 	
-	global $rowCount;
-	global $results;
-	
 	pdo_open_read();
-	
-	//create a new SQL query to select all members
-	$stmt = $db->query('SELECT users.first_name, users.last_name, members.scroll_num,
-		members.position, members.blurb, members.img_path
-		FROM users INNER JOIN members 
-		ON users.username = members.member_id
-		ORDER BY members.scroll_num');
-	//store all queried values as an associative array
-	$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	$rowCount = $stmt->rowCount();
 	
 ?>
 
