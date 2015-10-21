@@ -37,26 +37,9 @@
 	include_once($path);
 	
 	pdo_open_read();
-	
-?>
-
-<div class="container wrapper">
-	<div class="row">
-		<div class="col-lg-12">
-			<h1 class="page-header">Members</h1>
-		</div>
-	</div>
-	
-<?php
 
 	member_output();
-	
-?>
 
-</div>
-<!-- container closing div -->
-	
-<?php
 	$path = $_SERVER['DOCUMENT_ROOT']."/include/footer.html";
 	include_once($path);
 ?>
