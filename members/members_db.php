@@ -34,11 +34,6 @@
 	include_once($path);
 ?>
 <?php
-	$path = $_SERVER['DOCUMENT_ROOT']."/include/functions.php";
-	include_once($path);
-?>
-<?php
-	pdo_open();
 	
 	//put colcount up here, it can go lower
 	$colCount = 0;
