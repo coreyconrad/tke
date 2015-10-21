@@ -40,6 +40,7 @@
 	//database password, this will need to be changed
 	$password = '!Ambd-688%';
 	//put colcount up here, it can go lower
+	///////////////////////////////////////
 	$colCount = 0;
 	
 		//attempt to open connection, if connection is not available then give an error
