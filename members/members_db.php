@@ -35,8 +35,12 @@
 	
 	$path = $_SERVER['DOCUMENT_ROOT']."/include/functions.php";
 	include_once($path);
+?>
+<?php
+	pdo_open();
 	
-	db_read();
+	//put colcount up here, it can go lower
+	$colCount = 0;
 	
 	//create a new SQL query to select all members
 	$stmt = $db->query('SELECT users.first_name, users.last_name, members.scroll_num,
