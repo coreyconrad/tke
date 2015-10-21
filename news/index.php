@@ -50,13 +50,6 @@ include_once($path);
       		</div>  
       		<div class="col-md-9">
                 <h2 id="sec0">Colony News: October 2015</h2>
-                
-                <hr>
-              
-              	<h2 id="sec1">Homecoming Announcement</h2>
-                <h4>Updated: Oct. 12th</h4>
-              	<p>
-                The homecoming tailgate will be hosted at The Hamptons Statesboro, #227. If you haven't visited Statesboro in the last year, get in touch and we'll make sure you know where to go!</p>
        	           
               	<hr class="col-md-12">
 

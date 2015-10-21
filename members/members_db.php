@@ -33,6 +33,9 @@
 	$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
 	include_once($path);
 	
+	$path = $_SERVER['DOCUMENT_ROOT']."/include/functions.php";
+	include_once($path);
+	
 	//define database informaiton
 	$dsn = 'mysql:dbname=tkegsuco_info;host=localhost;';
 	//database username, this will need to be changed
