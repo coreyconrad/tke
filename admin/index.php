@@ -33,6 +33,22 @@
 		<?php
 		$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
 		include_once($path);
+		
+		$path = $_SERVER['DOCUMENT_ROOT']."/include/functions.php";
+		include_once($path);
+		
+		global $db;
+		
+		pdo_open_read();
+		
+		//get users in alpabetical order by last name
+		$stmt = $db->query('SELECT users.first_name, users.last_name, users.username FROM users ORDER BY users.last_name');
+		
+		$stmtpos = $db->query('SELECT members.position FROM members WHERE members.position IS NOT NULL');
+    
+		//store all queried values as an associative array
+		$userResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$posResults = $stmtpos->fetchAll(PDO::FETCH_ASSOC);
 		?>
 
 		<!-- wrapper -->
@@ -97,11 +113,15 @@
 						<label for="member" class="col-sm-2 control-label">Member</label>
 						<div class="col-sm-10">
 							<select class="form-control">
-								<option value="one">One</option>
-								<option value="two">Two</option>
-								<option value="three">Three</option>
-								<option value="four">Four</option>
-								<option value="five">Five</option>
+								<?php
+									foreach ($userResults as $row) {
+										$firstName = $row['first_name'];
+										$lastName = $row['last_name'];
+										$username = $row['username'];
+										
+										echo "<option value=".$username.">".$firstName." ".$lastName."</option>";
+									}
+								?>
 							</select>
 						</div>
 					</div>
@@ -109,12 +129,21 @@
 						<label for="position" class="col-sm-2 control-label">Position</label>
 						<div class="col-sm-10">
 							<select class="form-control">
-								<option value="one">One</option>
-								<option value="two">Two</option>
-								<option value="three">Three</option>
-								<option value="four">Four</option>
-								<option value="five">Five</option>
+								<option value="position">---</option>
+								<?php
+									foreach ($posResults as $row) {
+										$position = $row['position'];
+										
+										echo "<option value='position'>".$position."</option>";
+									}									
+								?>
 							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="newposition" class="col-sm-2 control-label">New Position</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="newposition" name="newposition" placeholder="New position">
 						</div>
 					</div>
 					<div class="form-group">

@@ -19,6 +19,25 @@ function pdo_open_read() {
     }
 }
 
+function pdo_open_admin() {
+    global $db;
+	//define database informaiton
+	$dsn = 'mysql:dbname=tkegsuco_info;host=localhost;';
+	//database username, this will need to be changed
+	//$username = 'tkegsuco_admin';
+    $username = 'root';
+	//database password, this will need to be changed
+    //$password = '!Ambd-688%';
+    $password = 'dev1';
+	
+    //attempt to open connection, if connection is not available then give an error
+    try {
+        $db = new PDO($dsn, $username, $password);
+    } catch(PDOException $e) {
+        echo "Could not establish database connection.";
+    }
+}
+
 function member_output() {
     global $db;
     
