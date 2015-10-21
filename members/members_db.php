@@ -36,17 +36,7 @@
 	$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
 	include_once($path);
 		
-	pdo_open();
-	
-	//put colcount up here, it can go lower
-	$colCount = 0;
-	
-		//attempt to open connection, if connection is not available then give an error
-		try {
-			$db = new PDO($dsn, $username, $password); // also allows an extra parameter of configuration
-		} catch(PDOException $e) {
-			die('Could not connect to the database.');
-		}
+	pdo_open_read();
 	
 	//create a new SQL query to select all members
 	$stmt = $db->query('SELECT users.first_name, users.last_name, members.scroll_num,
@@ -68,56 +58,9 @@
 	</div>
 		
 <?php
-	//begin foreach loop by storing results in individual row arrays	
-	foreach ($results as $row) {
-		//store array values for easy concatenation. Also I don't think you can concatenate array values.
-		$first = $row['first_name'];
-		$last = $row['last_name'];
-		$scroll_num = $row['scroll_num'];
-		$blurb = $row['blurb'];
-		$position = $row['position'];
-		$img = $row['img_path'];
 
-		//if no columns have been entered, insert a new row
-		if ($colCount==0) {
-			echo "<div class='row'>";
-		}	
+member_output();
 
-		//echo HTML with variables concatenated
-		echo "
-			<div class='col-md-3 col-xs-6 thumb member'>
-				<a class='thumbnail' href='#'>
-					<img class='img-responsive' src=".$img." alt='profile picture'>
-				</a>
-				<h3>".$first." ".$last."</h3>
-				<h4>".$position."</h4>
-				<h6>Scroll Number: ".$scroll_num."</h6>
-				<p>".$blurb."</p>
-			</div>	
-		";
-		//increment column count by one
-		$colCount++;
-		//if the column count is divisible by 4 and the column count equals the total rows queried, this is the last column of the last row
-		if ($colCount % 4 == 0 && $colCount==$rowCount) {
-			echo "
-				</div>
-				<hr />
-			";
-		//if the column count is not divisible by 4 but the column count equals the total rows queried, this is the last column but the row is not full
-		} elseif ($colCount==$rowCount) {
-			echo "
-				</div>
-				<hr />
-			";
-		//if the column count is divisible by 4, the end of the row has been reached and a new one is opened
-		} elseif ($colCount % 4 == 0) {
-			echo "
-				</div>
-				<hr />
-				<div class='row'>
-			";		
-		}
-	}
 ?>
 
 </div>
