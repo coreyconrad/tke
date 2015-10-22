@@ -24,7 +24,7 @@ article {
 }
 body {
 	background-attachment: fixed;
-	background-color: #f0f0f0;
+	background-color: #D8D8D8;
 	background-image: url("/img/background.png");
 	font-family: Merriweather,‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 	height: 100%;
@@ -119,6 +119,12 @@ hr {
 .navbar-default .navbar-nav > li > a {
 	color: #f0f0f0;
 }
+.navbar-default .navbar-toggle {
+	background-color: #ddd;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	background-color: #f0f0f0;
+}
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
 	background-color: #c45341;
 	color: #f0f0f0;
@@ -152,6 +158,16 @@ hr {
 	margin-bottom: -60px;
 	padding-bottom: 60px;
 }
+@media (max-width: 767px) {
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #e0e0e0;
+	}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    background-color: #c45341;
+	color: #f0f0f0;
+	}
+}
+
 /*
 .color-primary-0 { color: #CF4A47 }Main Primary color
 .color-primary-1 { color: #FFA7A5 }
