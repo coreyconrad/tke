@@ -112,7 +112,7 @@
 					<div class="form-group">
 						<label for="member" class="col-sm-2 control-label">Member</label>
 						<div class="col-sm-10">
-							<select class="form-control">
+							<select name= "member" class="form-control">
 								<?php
 									foreach ($userResults as $row) {
 										$firstName = $row['first_name'];
@@ -128,7 +128,7 @@
 					<div class="form-group">
 						<label for="position" class="col-sm-2 control-label">Position</label>
 						<div class="col-sm-10">
-							<select class="form-control">
+							<select name="position" class="form-control">
 								<option value="position">---</option>
 								<?php
 									foreach ($posResults as $row) {
