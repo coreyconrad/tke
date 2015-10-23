@@ -163,6 +163,7 @@
 						<label for="member_img" class="col-sm-2 control-label">Member Image</label>
 						<div class="col-sm-10">
 							<input type="file" name="fileToUpload" id="fileToUpload">
+							<input type="submit" value="Upload Image" name="submit">
 						</div>
 					</div>
 					<div class="form-group">
@@ -173,13 +174,7 @@
 				</form>
 				<hr>
 			</div>
-			<hr>
-			<form action="upload.php" method="post" enctype="multipart/form-data">
-				Select image to upload:
-				<input type="file" name="fileToUpload" id="fileToUpload">
-				<input type="submit" value="Upload Image" name="submit">
-			</form>
-			<hr>
+
 		</div>
 
 		<!-- footer -->
