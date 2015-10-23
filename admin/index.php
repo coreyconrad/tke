@@ -38,21 +38,47 @@
 		include_once($path);
 		
 		global $db;
+		global $uploadMsg;
 		
-		pdo_open_read();
+		pdo_open_admin();
 		
-		//get users in alpabetical order by last name
+		//get users in alpabetical order by last name for form
 		$stmt = $db->query('SELECT users.first_name, users.last_name, users.username FROM users ORDER BY users.last_name');
 		
+		//get all member positions for form
 		$stmtpos = $db->query('SELECT members.position FROM members WHERE members.position IS NOT NULL');
     
 		//store all queried values as an associative array
 		$userResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		$posResults = $stmtpos->fetchAll(PDO::FETCH_ASSOC);
+		
+		//get member data if submit has been pressed
+		if(isset($_POST['submit'])) {
+			$member = $_POST['member'];
+			$scroll = $_POST['scroll'];
+			$blurb = $_POST['blurb'];
+			
+			//if position is left blank, look for the new position
+			if($_POST['position']=="---"){
+				$position = $_POST['newposition'];
+			} else {
+				$position = $_POST['position'];
+			}	
+		}
+	
+		//update member table with new information
+		$stmtMem = $db->query()
+		
+		//set directory for image upload
+		$target_dir = $_SERVER['DOCUMENT_ROOT']."/img/Members/";
+
+		img_upload($target_dir);
 		?>
 
 		<!-- wrapper -->
 		<div class="container wrapper">
+		
+			<?php echo "<p>".$uploadMsg."</p>"; ?>
 			
 			<!-- Add new user -->
 			<div class="row">
@@ -108,7 +134,7 @@
 			<div class="row">
 				<h1>Edit member data for existing users</h1>
 				<hr>
-				<form class="form-horizontal" role="form" method="post" action="/admin/user.php" enctype="multipart/form-data">
+				<form class="form-horizontal" role="form" method="post" action="/admin/index.php" enctype="multipart/form-data">
 					<div class="form-group">
 						<label for="member" class="col-sm-2 control-label">Member</label>
 						<div class="col-sm-10">
@@ -163,7 +189,6 @@
 						<label for="member_img" class="col-sm-2 control-label">Member Image</label>
 						<div class="col-sm-10">
 							<input type="file" name="fileToUpload" id="fileToUpload">
-							<input type="submit" value="Upload Image" name="submit">
 						</div>
 					</div>
 					<div class="form-group">
