@@ -8,7 +8,8 @@ function pdo_open_read() {
 	$username = 'root';
     //$username = 'tkegsuco_reader';
 	//database password, this will need to be changed
-    $password = 'dev1';
+    //$password = 'dev1';
+	$password = '';
 	//$password = 'a97004285e831b0dc';
 	
     //attempt to open connection, if connection is not available then give an error
