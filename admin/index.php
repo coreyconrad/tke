@@ -38,7 +38,6 @@
 		include_once($path);
 		
 		global $db;
-		global $uploadMsg;
 		
 		pdo_open_admin();
 		
@@ -52,6 +51,56 @@
 		$userResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		$posResults = $stmtpos->fetchAll(PDO::FETCH_ASSOC);
 		
+		//set directory for image upload
+		$target_dir = $_SERVER['DOCUMENT_ROOT']."/img/Members/";
+
+		
+		$msg = NULL;
+		
+		//image upload logic
+		if(!empty($_FILES["fileToUpload"]["name"])){
+			
+			$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+			$uploadOk = 1;
+			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+			// Check if image file is an actual image or fake image
+				$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+				if($check !== false) {
+					$msg = "File is an image - " . $check["mime"] . ".";
+					$uploadOk = 1;
+				} else {
+					$msg .= "<br />File is not an image.";
+					$uploadOk = 0;
+				}
+			// Check if file already exists
+			//if (file_exists($target_file)) {
+			//	$msg .= "<br />Sorry, file already exists.";
+			//	$uploadOk = 0;
+			//}
+			// Check file size
+			if ($_FILES["fileToUpload"]["size"] > 4092000) {
+				$msg .= "<br />Sorry, your file is too large.";
+				$uploadOk = 0;
+			}
+			// Allow certain file formats
+			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+			&& $imageFileType != "gif" ) {
+				$msg .= "<br />Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+				$uploadOk = 0;
+			}
+			// Check if $uploadOk is set to 0 by an error
+			if ($uploadOk == 0) {
+				$msg .= "<br />Sorry, your file was not uploaded.";
+			// if everything is ok, try to upload file
+			} else {
+				if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+					$msg .= "<br />The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+				} else {
+					$msg .= "<br />Sorry, there was an error uploading your file.";
+				}
+			}		
+		}
+		
 		//get member data if submit has been pressed
 		if(isset($_POST['submit'])) {
 			$member = $_POST['member'];
@@ -64,21 +113,35 @@
 			} else {
 				$position = $_POST['position'];
 			}	
+			
+			//update member table with new information
+			$stmtMem = $db->prepare("
+							UPDATE members
+							SET 
+							scroll_num = :scrollnum,
+							blurb = :blurb,
+							position = :position,
+							img_path = :img_path
+							WHERE member_id = :member"
+							);
+			$stmtMem->bindParam(':scrollnum', $scroll);
+			$stmtMem->bindParam(':blurb', $blurb);
+			$stmtMem->bindParam(':position', $position);
+			$stmtMem->bindParam(':img_path', $target_file);
+			$stmtMem->bindParam(':member', $member);
+			
+			if($stmtMem->execute()){
+				$msg .= "<br />Member updated";
+			} else {
+				$msg .= "<br />Member profile not updated.";
+			}
 		}
-	
-		//update member table with new information
-		$stmtMem = $db->query()
-		
-		//set directory for image upload
-		$target_dir = $_SERVER['DOCUMENT_ROOT']."/img/Members/";
-
-		img_upload($target_dir);
 		?>
 
 		<!-- wrapper -->
 		<div class="container wrapper">
 		
-			<?php echo "<p>".$uploadMsg."</p>"; ?>
+			<?php echo "<p>".$msg."</p>"; ?>
 			
 			<!-- Add new user -->
 			<div class="row">
@@ -155,12 +218,12 @@
 						<label for="position" class="col-sm-2 control-label">Position</label>
 						<div class="col-sm-10">
 							<select name="position" class="form-control">
-								<option value="position">---</option>
+								<option value="---">---</option>
 								<?php
 									foreach ($posResults as $row) {
 										$position = $row['position'];
 										
-										echo "<option value='position'>".$position."</option>";
+										echo "<option value=".$position.">".$position."</option>";
 									}									
 								?>
 							</select>
