@@ -244,7 +244,7 @@
 						<label for="scroll" class="col-sm-2 control-label">Scroll #</label>
 						<div class="col-sm-10">
 							<!-- We should look into crating the default value of the value tag the lowest current scroll# -->
-							<input type="number" class="form-control" id="scroll" name="scroll" placeholder="###" value="562">
+							<input type="number" class="form-control" id="scroll" name="scroll" placeholder="###" value="">
 						</div>
 					</div>
 					<div class="form-group">
