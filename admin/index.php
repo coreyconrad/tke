@@ -60,7 +60,12 @@
 		//image upload logic
 		if(!empty($_FILES["fileToUpload"]["name"])){
 			
-			$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+			//get member name, put to lower case, replace spaces with underscores
+			$filename = strtolower($_POST['member']) . "." . pathinfo(basename($_FILES["fileToUpload"]["name"]),PATHINFO_EXTENSION);
+			//real location
+			$target_file = $target_dir . $filename;
+			//create relative image path
+			$relImgPath = "/img/Members/" . $filename;
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			// Check if image file is an actual image or fake image
@@ -94,7 +99,7 @@
 			// if everything is ok, try to upload file
 			} else {
 				if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-					$msg .= "<br />The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+					$msg .= "<br />The file ". $filename . " has been uploaded.";
 				} else {
 					$msg .= "<br />Sorry, there was an error uploading your file.";
 				}
@@ -127,7 +132,7 @@
 			$stmtMem->bindParam(':scrollnum', $scroll);
 			$stmtMem->bindParam(':blurb', $blurb);
 			$stmtMem->bindParam(':position', $position);
-			$stmtMem->bindParam(':img_path', $target_file);
+			$stmtMem->bindParam(':img_path', $relImgPath);
 			$stmtMem->bindParam(':member', $member);
 			
 			if($stmtMem->execute()){
