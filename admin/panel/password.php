@@ -24,15 +24,20 @@
 				$new_pass = md5($_POST['password']);
 				$conf_new_pass = md5($_POST['conf_new_pass']);				
 
+				$user = $_SESSION['user'];
+				
 				if($new_pass == $conf_new_pass && $_SESSION['dbPass'] == $current_pass) {
 					//update member table with new information
 					$stmtUpdate = $db->prepare("
-									UPDATE users
+									UPDATE 'users'
 									SET 
-									password = :new_pass"
-									);
-					$stmtUpdate->bindParam(':password', $new_pass);
+									'password' = :new_pass
+									WHERE 'username' = :user
+									");
+					$stmtUpdate->bindParam(':new_pass', $new_pass);
+					$stmtUpdate->bindParam(':user', $user);
 				}
+				
 				if($stmtUpdate->execute()){
 					$msg .= "<br />Password updated";
 				} else {
