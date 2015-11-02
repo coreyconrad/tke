@@ -257,6 +257,11 @@
 						</form>
 					</div>
 				</div>
+				
+				<div class='row thumbnail'>
+					<h1 class='text-center'>Update Password</h1>
+				</div>
+				
 				</div>";
 
 				//include footer
