@@ -157,6 +157,15 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="admin" class="col-sm-2 control-label">Admin</label>
+						<div class="col-sm-10">
+							<select name= "admin" class="form-control">
+								<option value="0">Member</option>
+								<option value="1">Admin</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
 						<div class="col-sm-10 col-sm-offset-2">
 							<input id="submit" name="submit" type="submit" value="Add User" class="btn btn-primary">
 						</div>
