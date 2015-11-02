@@ -106,6 +106,8 @@
 							$msg .= "<br />Sorry, there was an error uploading your file.";
 						}
 					}		
+				} else {
+					$relImgPath = $img_path = "http://placehold.it/400x300";
 				}
 				
 				//get member data if submit has been pressed
@@ -117,6 +119,9 @@
 					//if position is left blank, look for the new position
 					if($_POST['position']=="---"){
 						$position = $_POST['newposition'];
+						if($position == ""){
+							$position = NULL;
+						}
 					} else {
 						$position = $_POST['position'];
 					}	
