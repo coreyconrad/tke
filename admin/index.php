@@ -43,7 +43,9 @@
 			
 		<!-- content -->
 		<?php
+		//check to see if the username and password have been input
 		if(isset($_POST['username'])&&isset($_POST['password'])) {
+			//start browser cache session
 			session_start();
 
 			# Check for session timeout, else initiliaze time
@@ -90,15 +92,17 @@
 			//check to see if form username and password match database and if user is an admin
 			if ($_SESSION['user'] == $_SESSION['dbUser'] && $_SESSION['dbAdmin'] && $_SESSION['pass'] == $_SESSION['dbPass']) {
 				header('location: /admin/panel/index.php');
+			//check to see if user is a member
 			} elseif($_SESSION['user'] == $_SESSION['dbUser'] && !$_SESSION['dbAdmin'] && $_SESSION['pass'] == $_SESSION['dbPass']) {
 				header('location: /admin/panel/member.php');
+			//if credentials are not valid, redisplay form with message that credentials are no good
 			} else {
 				echo "
 				<div class='container log-in thumbnail'>
 				<div class='row text-center'>
 					<h1>Admin Login</h1>
+					<h3>Invalid login credentials</h3>
 				</div>
-				<h3>Invalid login credentials</h3>
 				<form class='form-horizontal' role='form' method='post' action='/admin/index.php'>
 				<div class='row log-row'>
 					<div class='col-sm-4'></div>
@@ -127,6 +131,7 @@
 			</div>
 			";
 			}
+		//if username and password are not set, display form
 		} else {
 			echo "
 				<div class='container log-in thumbnail'>
