@@ -155,7 +155,7 @@
 				echo "	
 					<!-- Add/edit member data for existing user -->
 					<div class='row'>
-						<h1>Edit member data for existing users</h1>
+						<h1>Edit your member data</h1>
 						<hr>
 						<form class='form-horizontal' role='form' method='post' action='/admin/panel/index.php' enctype='multipart/form-data'>
 							<div class='form-group'>
