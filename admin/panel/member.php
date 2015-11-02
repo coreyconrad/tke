@@ -28,7 +28,6 @@
 </head>
 
 	<body>
-		<h1>TEST</h1>
 		<!-- header -->
 		<?php
 		session_start();
@@ -45,7 +44,7 @@
 				pdo_open_admin();
 				
 				//get users in alpabetical order by last name for form
-				$stmt = $db->query('SELECT users.first_name, users.last_name, users.username FROM users ORDER BY users.last_name');
+				$stmt = $db->query('SELECT users.first_name, users.last_name, users.username FROM users WHERE users.username = "'.$_SESSION['dbUser'].'"');
 				
 				//get all member positions for form
 				$stmtpos = $db->query('SELECT members.position FROM members WHERE members.position IS NOT NULL');
