@@ -52,7 +52,7 @@
 		} else {
 			echo "
 				<div class='container log-in'>
-				<form class='form-horizontal' role='form' method='post' action='/admin/user.php'>
+				<form class='form-horizontal' role='form' method='post' action='/admin/login.php'>
 				<div class='row log-row'>
 					<div class='col-sm-4'></div>
 					<label for='username' class='col-sm-1 control-label'>Username:</label>
