@@ -20,6 +20,8 @@
 			
 			if(isset($_POST['submit'])) {
 				
+				echo "POST recieved!";
+				
 				$current_pass = md5($_POST['current_pass']);
 				$new_pass = md5($_POST['password']);
 				$conf_new_pass = md5($_POST['conf_new_pass']);
@@ -44,6 +46,6 @@
 
 	}
 	
-	header('location: /admin/panel/index.php');
+	//header('location: /admin/panel/index.php');
 	
 ?>	
