@@ -67,11 +67,13 @@
 					$img_path = $row['img_path'];
 					$scroll_num = $row['scroll_num'];
 					$blurb = $row['blurb'];
+					$pos = $row['position'];
 					
 					if($member_id == $_POST['member']){
 						$current_img = $img_path;
 						$current_scroll = $scroll_num;
 						$current_blurb = $blurb;
+						$current_pos = $pos;
 					}
 				}
 				
@@ -138,7 +140,7 @@
 					if($_POST['position']=="---"){
 						$position = $_POST['newposition'];
 						if($position == ""){
-							$position = NULL;
+							$position = $current_pos;
 						}
 					} else {
 						$position = $_POST['position'];
