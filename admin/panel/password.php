@@ -22,12 +22,7 @@
 				
 				$current_pass = md5($_POST['current_pass']);
 				$new_pass = md5($_POST['password']);
-				$conf_new_pass = md5($_POST['conf_new_pass']);
-				
-				echo $current_pass;
-				echo "<br>";
-				echo $_SESSION['dbPass'];
-				
+				$conf_new_pass = md5($_POST['conf_new_pass']);				
 
 				if($new_pass == $conf_new_pass && $_SESSION['dbPass'] == $current_pass) {
 					//update member table with new information
@@ -36,7 +31,7 @@
 									SET 
 									password = :new_pass"
 									);
-					$stmtUpdate->bindParam(':password', $password);
+					$stmtUpdate->bindParam(':new_pass', $new_pass);
 				}
 				if($stmtUpdate->execute()){
 					$msg .= "<br />Password updated";
@@ -48,6 +43,6 @@
 
 	}
 	
-	//header('location: /admin/panel/index.php');
+	header('location: /admin/panel/index.php');
 	
 ?>	
