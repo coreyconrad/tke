@@ -259,17 +259,23 @@
 					<div class='row thumbnail'>
 						<h1 class='text-center'>Update Password</h1>
 						<form class='form-horizontal admin' role='form' method='post' action='/admin/panel/password.php' enctype='multipart/form-data'>
-							<label for='current_pass' class='col-sm-2 control-label'>Current Password:</label>
-							<div class='col-sm-10'>
-								<input type='password' class='form-control' id='current_pass' name='current_pass' placeholder='current password' value=''>
+							<div class='form-group'>
+								<label for='current_pass' class='col-sm-2 control-label'>Current Password:</label>
+								<div class='col-sm-10'>
+									<input type='password' class='form-control' id='current_pass' name='current_pass' placeholder='current password' value=''>
+								</div>
 							</div>
-							<label for='new_pass' class='col-sm-2 control-label'>New Password:</label>
-							<div class='col-sm-10'>
-								<input type='password' class='form-control' id='new_pass' name='new_pass' placeholder='new password' value=''>
+							<div class='form-group'>
+								<label for='new_pass' class='col-sm-2 control-label'>New Password:</label>
+								<div class='col-sm-10'>
+									<input type='password' class='form-control' id='new_pass' name='new_pass' placeholder='new password' value=''>
+								</div>
 							</div>
-							<label for='conf_new_pass' class='col-sm-2 control-label'>Current Password:</label>
-							<div class='col-sm-10'>
-								<input type='password' class='form-control' id='conf_new_pass' name='conf_new_pass' placeholder='new password' value=''>
+							<div class='form-group'>
+								<label for='conf_new_pass' class='col-sm-2 control-label'>Current Password:</label>
+								<div class='col-sm-10'>
+									<input type='password' class='form-control' id='conf_new_pass' name='conf_new_pass' placeholder='new password' value=''>
+								</div>
 							</div>
 						</form>
 					</div>
