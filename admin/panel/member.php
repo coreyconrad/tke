@@ -48,15 +48,27 @@
 				
 				//get all member positions for form
 				$stmtpos = $db->query('SELECT members.position FROM members WHERE members.position IS NOT NULL');
+				
+				//get all member_id's and image paths
+				$stmtimg = $db->query('SELECT members.member_id, members.img_path FROM members');
 			
 				//store all queried values as an associative array
 				$userResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				$posResults = $stmtpos->fetchAll(PDO::FETCH_ASSOC);
+				$imgResults = $stmtimg->fetchAll(PDO::FETCH_ASSOC);
 				
 				//set directory for image upload
 				$target_dir = $_SERVER['DOCUMENT_ROOT']."/img/Members/";
 
 				$msg = NULL;
+				
+				foreach ($imgResults as $row) {
+					$member_id = $row['member_id'];
+					$img_path = $row['img_path'];
+					if($member_id == $_POST['member']){
+						$current_img = $img_path;
+					}
+				}
 				
 				//image upload logic
 				if(!empty($_FILES["fileToUpload"]["name"])){
@@ -105,6 +117,8 @@
 							$msg .= "<br />Sorry, there was an error uploading your file.";
 						}
 					}		
+				} elseif($current_img != "http://placehold.it/400x300") {
+					$relImgPath = $current_img;
 				} else {
 					$relImgPath = $img_path = "http://placehold.it/400x300";
 				}
