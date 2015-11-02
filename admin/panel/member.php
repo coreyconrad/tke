@@ -28,7 +28,7 @@
 </head>
 
 	<body>
-
+		<h1>TEST</h1>
 		<!-- header -->
 		<?php
 		session_start();
@@ -154,64 +154,6 @@
 					
 				//page content
 				echo "	
-					<div class='row'>
-						<h1>Add User</h1>
-						<hr>
-						<form class='form-horizontal' role='form' method='post' action='/admin/user.php'>
-							<div class='form-group'>
-								<label for='first_name' class='col-sm-2 control-label'>First Name</label>
-								<div class='col-sm-10'>
-									<input type='text' class='form-control' id='first_name' name='first_name' placeholder='First Name' value=''>
-								</div>
-							</div>
-							<div class='form-group'>
-								<label for='last_name' class='col-sm-2 control-label'>Last Name</label>
-								<div class='col-sm-10'>
-									<input type='text' class='form-control' id='last_name' name='last_name' placeholder='Last Name' value=''>
-								</div>
-							</div>
-							<div class='form-group'>
-								<label for='email' class='col-sm-2 control-label'>Email</label>
-								<div class='col-sm-10'>
-									<input type='email' class='form-control' id='email' name='email' placeholder='example@domain.com' value=''>
-								</div>
-							</div>
-							<div class='form-group'>
-								<label for='dob' class='col-sm-2 control-label'>Birthday</label>
-								<div class='col-sm-10'>
-									<input type='date' class='form-control' id='dob' name='dob' placeholder='' value=''>
-								</div>
-							</div>
-							<div class='form-group'>
-								<label for='username' class='col-sm-2 control-label'>Username</label>
-								<div class='col-sm-10'>
-									<input type='text' class='form-control' id='username' name='username' placeholder='username' value=''>
-								</div>
-							</div>
-							<div class='form-group'>
-								<label for='password' class='col-sm-2 control-label'>Password</label>
-								<div class='col-sm-10'>
-									<input type='password' class='form-control' id='password' name='password' placeholder='password' value=''>
-								</div>
-							</div>
-							<div class='form-group'>
-								<label for='admin' class='col-sm-2 control-label'>Admin</label>
-								<div class='col-sm-10'>
-									<select name= 'admin' class='form-control'>
-										<option value='0'>Member</option>
-										<option value='1'>Admin</option>
-									</select>
-								</div>
-							</div>
-							<div class='form-group'>
-								<div class='col-sm-10 col-sm-offset-2'>
-									<input id='submit' name='submit' type='submit' value='Add User' class='btn btn-primary'>
-								</div>
-							</div>
-						</form>
-						<hr>
-					</div>
-					
 					<!-- Add/edit member data for existing user -->
 					<div class='row'>
 						<h1>Edit member data for existing users</h1>
