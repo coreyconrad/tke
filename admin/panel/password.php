@@ -24,6 +24,9 @@
 				$new_pass = md5($_POST['password']);
 				$conf_new_pass = md5($_POST['conf_new_pass']);
 				
+				echo $current_pass;
+				echo $_SESSION['dbPass'];
+				
 
 				if($new_pass == $conf_new_pass && $_SESSION['dbPass'] == $current_pass) {
 					//update member table with new information
