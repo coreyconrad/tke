@@ -269,7 +269,7 @@
 							</div>
 							<div class='row form-group'>
 								<div class='col-sm-10 col-sm-offset-2'>
-									<input id='post' name='post' type='post' value='Update Password' class='btn btn-primary'>
+									<input id='post' name='post' type='submit' value='Update Password' class='btn btn-primary'>
 								</div>
 							</div>
 						</form>
