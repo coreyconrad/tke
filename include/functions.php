@@ -4,11 +4,11 @@ function pdo_open_read() {
 	//define database informaiton
 	$dsn = 'mysql:dbname=tkegsuco_info;host=localhost;';
 	//database username, this will need to be changed
-	//$username = 'root';
-    $username = 'tkegsuco_reader';
+	$username = 'root';
+    //$username = 'tkegsuco_reader';
 	//database password, this will need to be changed
-	//$password = '';
-	$password = 'a97004285e831b0dc';
+	$password = '';
+	//$password = 'a97004285e831b0dc';
 	
     //attempt to open connection, if connection is not available then give an error
     try {
@@ -23,11 +23,11 @@ function pdo_open_admin() {
 	//define database informaiton
 	$dsn = 'mysql:dbname=tkegsuco_info;host=localhost;';
 	//database username, this will need to be changed
-	$username = 'tkegsuco_admin';
-    //$username = 'root';
+	//$username = 'tkegsuco_admin';
+    $username = 'root';
 	//database password, this will need to be changed
-    $password = '!Ambd-688%';
-    //$password = '';
+    //$password = '!Ambd-688%';
+    $password = '';
 	
     //attempt to open connection, if connection is not available then give an error
     try {

@@ -91,7 +91,7 @@
 			
 			//check to see if form username and password match database and if user is an admin
 			if ($_SESSION['user'] == $_SESSION['dbUser'] && $_SESSION['dbAdmin'] && $_SESSION['pass'] == $_SESSION['dbPass']) {
-				header('location: /admin/panel/index.php');
+				header('location: /admin/panel/admin.php');
 			//check to see if user is a member
 			} elseif($_SESSION['user'] == $_SESSION['dbUser'] && !$_SESSION['dbAdmin'] && $_SESSION['pass'] == $_SESSION['dbPass']) {
 				header('location: /admin/panel/member.php');
