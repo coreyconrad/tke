@@ -267,6 +267,11 @@
 									<input type='password' class='form-control' id='conf_new_pass' name='conf_new_pass' placeholder='new password' value=''>
 								</div>
 							</div>
+							<div class='row form-group'>
+								<div class='col-sm-10 col-sm-offset-2'>
+									<input id='post' name='post' type='post' value='Update Password' class='btn btn-primary'>
+								</div>
+							</div>
 						</form>
 					</div>
 					
