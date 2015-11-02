@@ -40,10 +40,6 @@
 
 		<!-- wrapper -->
 		<div class="container wrapper">
-		
-			<div class="row text-center">
-				<h1>Admin Login</h1>
-			</div>
 			
 		<!-- content -->
 		<?php
@@ -73,7 +69,10 @@
 				include_once($path);
 			} else {
 				echo "
-				<div class='container log-in'>
+				<div class='container log-in thumbnail'>
+				<div class='row text-center'>
+					<h1>Admin Login</h1>
+				</div>
 				<h3>Invalid login credentials</h3>
 				<form class='form-horizontal' role='form' method='post' action='/admin/index.php'>
 				<div class='row log-row'>
@@ -105,7 +104,10 @@
 			}
 		} else {
 			echo "
-				<div class='container log-in'>
+				<div class='container log-in thumbnail'>
+				<div class='row text-center'>
+					<h1>Admin Login</h1>
+				</div>
 				<form class='form-horizontal' role='form' method='post' action='/admin/index.php'>
 				<div class='row log-row'>
 					<div class='col-sm-4'></div>
