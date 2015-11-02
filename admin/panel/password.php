@@ -44,6 +44,6 @@
 
 	}
 	
-	header('location: /admin/index.php');
+	header('location: /admin/panel/index.php');
 	
 ?>	
