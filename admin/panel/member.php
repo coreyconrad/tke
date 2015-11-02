@@ -258,6 +258,7 @@
 					</div>
 				</div>
 				
+				</div>
 				<div class='row thumbnail'>
 					<h1 class='text-center'>Update Password</h1>
 					<form class='form-horizontal admin' role='form' method='post' action='/admin/panel/password.php' enctype='multipart/form-data'>
@@ -267,8 +268,7 @@
 						</div>
 					</form>
 				</div>
-				
-				</div>";
+				";
 
 				//include footer
 				$path = $_SERVER['DOCUMENT_ROOT']."/include/footer.html";
