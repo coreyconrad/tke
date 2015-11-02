@@ -25,6 +25,7 @@
 				$conf_new_pass = md5($_POST['conf_new_pass']);
 				
 				echo $current_pass;
+				echo "<br>"
 				echo $_SESSION['dbPass'];
 				
 
