@@ -272,7 +272,7 @@
 								</div>
 							</div>
 							<div class='row form-group'>
-								<label for='conf_new_pass' class='col-sm-2 control-label'>Current Password:</label>
+								<label for='conf_new_pass' class='col-sm-2 control-label'>Confirm New Password:</label>
 								<div class='col-sm-10'>
 									<input type='password' class='form-control' id='conf_new_pass' name='conf_new_pass' placeholder='new password' value=''>
 								</div>
