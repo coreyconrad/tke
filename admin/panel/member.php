@@ -50,23 +50,28 @@
 				$stmtpos = $db->query('SELECT members.position FROM members WHERE members.position IS NOT NULL');
 				
 				//get all member_id's and image paths
-				$stmtimg = $db->query('SELECT members.member_id, members.img_path FROM members');
+				$stmtcurrent = $db->query('SELECT members.* FROM members');
 			
 				//store all queried values as an associative array
 				$userResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				$posResults = $stmtpos->fetchAll(PDO::FETCH_ASSOC);
-				$imgResults = $stmtimg->fetchAll(PDO::FETCH_ASSOC);
+				$currentResults = $stmtcurrent->fetchAll(PDO::FETCH_ASSOC);
 				
 				//set directory for image upload
 				$target_dir = $_SERVER['DOCUMENT_ROOT']."/img/Members/";
 
 				$msg = NULL;
 				
-				foreach ($imgResults as $row) {
+				foreach ($currentResults as $row) {
 					$member_id = $row['member_id'];
 					$img_path = $row['img_path'];
+					$scroll_num = $row['scroll_num'];
+					$blurb = $row['blurb'];
+					
 					if($member_id == $_POST['member']){
 						$current_img = $img_path;
+						$current_scroll = $scroll_num;
+						$current_blurb = $blurb;
 					}
 				}
 				
@@ -139,7 +144,14 @@
 						$position = $_POST['position'];
 					}	
 					
+					//Check if a new scroll value has been assigned
+					if($scroll == NULL || $scroll == 0 || $scroll == ""){
+						$scroll = $current_scroll;
+					}
 					
+					if($blurb == NULL || $blurb == ""){
+						$blurb = $current_blurb;
+					}
 					
 					//update member table with new information
 					$stmtMem = $db->prepare("
