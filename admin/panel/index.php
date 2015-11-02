@@ -250,7 +250,7 @@
 								</div>
 							</div>
 							<div class='form-group'>
-								<label for='newposition' class='col-sm-2 control-label'>New Position</label>
+								<label for='newposition' class='col-sm-2 value='NULL' control-label'>New Position</label>
 								<div class='col-sm-10'>
 									<input type='text' class='form-control' id='newposition' name='newposition' placeholder='New position'>
 								</div>
