@@ -37,7 +37,11 @@
 
 		<!-- wrapper -->
 		<div class="container wrapper">
-
+		
+			<div class="row text-center">
+				<h1>Admin Login</h1>
+			</div>
+			
 		<!-- content -->
 		<?php
 		$user = "blank";
@@ -46,7 +50,35 @@
 			$path = $_SERVER['DOCUMENT_ROOT']."/admin/content.php";
 			include_once($path);
 		} else {
-			echo "invalid";
+			echo "
+				<div class='container log-in'>
+				<form class='form-horizontal' role='form' method='post' action='/admin/user.php'>
+				<div class='row log-row'>
+					<div class='col-sm-4'></div>
+					<label for='username' class='col-sm-1 control-label'>Username:</label>
+					<div class='col-sm-3'>
+						<input type='text' class='col-sm-3 form-control' id='username' name='username' placeholder='username' value=''>
+					</div>					
+					<div class='col-sm-4'></div>
+				</div>
+				<div class='row log-row'>
+					<div class='col-sm-4'></div>
+					<label for='password' class='col-sm-1 control-label'>Password:</label>
+					<div class='col-sm-3'>
+						<input type='password' class='form-control' id='password' name='password' placeholder='password' value=''>
+					</div>
+					<div class='col-sm-4'></div>
+				</div>
+				<div class='row log-row'>
+					<div class='col-sm-4'></div>
+					<div class='col-sm-4 col-sm-offset-3'>
+						<input id='submit' name='submit' type='submit' value='Login' class='btn btn-primary'>
+					</div>
+					<div class='col-sm-4'></div>
+				</div>
+				</form>
+			</div>
+			";
 		}
 		?>		
 		
