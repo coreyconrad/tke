@@ -33,6 +33,9 @@
 		<?php
 		$path = $_SERVER['DOCUMENT_ROOT']."/include/navbar.html";
 		include_once($path);
+		
+		$path = $_SERVER['DOCUMENT_ROOT']."/include/functions.php";
+		include_once($path);
 		?>
 
 		<!-- wrapper -->
@@ -44,15 +47,66 @@
 			
 		<!-- content -->
 		<?php
-		$user = "blank";
-		$password = "blank";
-		if($user == "admin" && $pass == "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"){
-			$path = $_SERVER['DOCUMENT_ROOT']."/admin/content.php";
-			include_once($path);
+		if(isset($_POST['username'])&&isset($_POST['password'])) {
+			$username = $_POST['username'];
+			$password = md5($_POST['password']);
+			
+			global $db;
+			
+			//start read-only session
+			pdo_open_read();
+			
+			//look for username filled out in form
+			$stmt = $db->query('SELECT * FROM users WHERE username = "'.$username.'"');
+		
+			//store all queried values as an associative array
+			$userResult = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			
+			//store username and hashed password
+			$dbUser = $userResult[0]['username'];
+			$dbPassword = $userResult[0]['password'];
+			$dbAdmin = $userResult[0]['admin'];
+			
+			//check to see if form username and password match database and if user is an admin
+			if ($username == $dbUser && $dbAdmin == 1 && $password == $dbPassword) {
+				$path = $_SERVER['DOCUMENT_ROOT']."/admin/content.php";
+				include_once($path);
+			} else {
+				echo "
+				<div class='container log-in'>
+				<h3>Invalid login credentials</h3>
+				<form class='form-horizontal' role='form' method='post' action='/admin/index.php'>
+				<div class='row log-row'>
+					<div class='col-sm-4'></div>
+					<label for='username' class='col-sm-1 control-label'>Username:</label>
+					<div class='col-sm-3'>
+						<input type='text' class='col-sm-3 form-control' id='username' name='username' placeholder='username' value=''>
+					</div>					
+					<div class='col-sm-4'></div>
+				</div>
+				<div class='row log-row'>
+					<div class='col-sm-4'></div>
+					<label for='password' class='col-sm-1 control-label'>Password:</label>
+					<div class='col-sm-3'>
+						<input type='password' class='form-control' id='password' name='password' placeholder='password' value=''>
+					</div>
+					<div class='col-sm-4'></div>
+				</div>
+				<div class='row log-row'>
+					<div class='col-sm-4'></div>
+					<div class='col-sm-4 col-sm-offset-3'>
+						<input id='submit' name='submit' type='submit' value='Login' class='btn btn-primary'>
+					</div>
+					<div class='col-sm-4'></div>
+				</div>
+				</form>
+			</div>
+			";
+			}
 		} else {
 			echo "
 				<div class='container log-in'>
-				<form class='form-horizontal' role='form' method='post' action='/admin/login.php'>
+				<form class='form-horizontal' role='form' method='post' action='/admin/index.php'>
 				<div class='row log-row'>
 					<div class='col-sm-4'></div>
 					<label for='username' class='col-sm-1 control-label'>Username:</label>
@@ -80,6 +134,40 @@
 			</div>
 			";
 		}
+		/*if($user == "admin" && $pass == "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"){
+			$path = $_SERVER['DOCUMENT_ROOT']."/admin/content.php";
+			include_once($path);
+		} else {
+			echo "
+				<div class='container log-in'>
+				<form class='form-horizontal' role='form' method='post' action='/admin/index.php'>
+				<div class='row log-row'>
+					<div class='col-sm-4'></div>
+					<label for='username' class='col-sm-1 control-label'>Username:</label>
+					<div class='col-sm-3'>
+						<input type='text' class='col-sm-3 form-control' id='username' name='username' placeholder='username' value=''>
+					</div>					
+					<div class='col-sm-4'></div>
+				</div>
+				<div class='row log-row'>
+					<div class='col-sm-4'></div>
+					<label for='password' class='col-sm-1 control-label'>Password:</label>
+					<div class='col-sm-3'>
+						<input type='password' class='form-control' id='password' name='password' placeholder='password' value=''>
+					</div>
+					<div class='col-sm-4'></div>
+				</div>
+				<div class='row log-row'>
+					<div class='col-sm-4'></div>
+					<div class='col-sm-4 col-sm-offset-3'>
+						<input id='submit' name='submit' type='submit' value='Login' class='btn btn-primary'>
+					</div>
+					<div class='col-sm-4'></div>
+				</div>
+				</form>
+			</div>
+			";
+		}*/
 		?>		
 		
 		</div>

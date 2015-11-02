@@ -12,7 +12,7 @@
 		$email = $_POST['email'];
 		$dob = $_POST['dob'];
 		$username = $_POST['username'];
-		$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+		$password = md5($_POST['password']);
 		$img_path = "http://placehold.it/400x300";
 		$admin = $_POST['admin'];
 	} else {
