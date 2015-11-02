@@ -39,6 +39,7 @@ include_once($path);
 <div class="container wrapper">
 	<div class="text-center">
 		<h1><i class="fa fa-exclamation-triangle"></i> <u>COREY YOU NEED TO UPDATE THIS PAGE!</u> <i class="fa fa-exclamation-triangle"></i></h1>
+		<p>If you see this Corey, know we're coming for you...</p>
 	</div>
 </div>
 
