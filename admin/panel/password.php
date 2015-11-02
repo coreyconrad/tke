@@ -31,7 +31,7 @@
 									SET 
 									password = :new_pass"
 									);
-					$stmtUpdate->bindParam(':new_pass', $new_pass);
+					$stmtUpdate->bindParam(':password', $new_pass);
 				}
 				if($stmtUpdate->execute()){
 					$msg .= "<br />Password updated";
