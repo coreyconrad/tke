@@ -192,7 +192,7 @@
 				echo "	
 					<div class='row thumbnail'>
 						<h1 class='text-center'>Add User</h1>
-						<form class='form-horizontal' role='form' method='post' action='/admin/user.php'>
+						<form class='form-horizontal admin' role='form' method='post' action='/admin/user.php'>
 							<div class='form-group'>
 								<label for='first_name' class='col-sm-2 control-label'>First Name</label>
 								<div class='col-sm-10'>
@@ -249,7 +249,7 @@
 					<!-- Add/edit member data for existing user -->
 					<div class='row thumbnail'>
 						<h1 class='text-center'>Edit member data for existing users</h1>
-						<form class='form-horizontal' role='form' method='post' action='/admin/panel/index.php' enctype='multipart/form-data'>
+						<form class='form-horizontal admin' role='form' method='post' action='/admin/panel/index.php' enctype='multipart/form-data'>
 							<div class='form-group'>
 								<label for='member' class='col-sm-2 control-label'>Member</label>
 								<div class='col-sm-10'>

@@ -191,7 +191,7 @@
 					<!-- Add/edit member data for existing user -->
 					<div class='row thumbnail'>
 						<h1 class='text-center'>Edit your member data</h1>
-						<form class='form-horizontal' role='form' method='post' action='/admin/panel/member.php' enctype='multipart/form-data'>
+						<form class='form-horizontal admin' role='form' method='post' action='/admin/panel/member.php' enctype='multipart/form-data'>
 							<div class='form-group'>
 								<label for='member' class='col-sm-2 control-label'>Member</label>
 								<div class='col-sm-10'>
