@@ -157,7 +157,7 @@
 					<div class='row'>
 						<h1>Edit your member data</h1>
 						<hr>
-						<form class='form-horizontal' role='form' method='post' action='/admin/panel/index.php' enctype='multipart/form-data'>
+						<form class='form-horizontal' role='form' method='post' action='/admin/panel/member.php' enctype='multipart/form-data'>
 							<div class='form-group'>
 								<label for='member' class='col-sm-2 control-label'>Member</label>
 								<div class='col-sm-10'>
