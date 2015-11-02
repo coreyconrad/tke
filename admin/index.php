@@ -44,8 +44,32 @@
 		<!-- content -->
 		<?php
 		if(isset($_POST['username'])&&isset($_POST['password'])) {
-			$username = $_POST['username'];
-			$password = md5($_POST['password']);
+			session_start();
+
+			# Check for session timeout, else initiliaze time
+			if (isset($_SESSION['timeout'])) {	
+				# Check Session Time for expiry
+				#
+				# Time is in seconds. 10 * 60 = 600s = 10 minutes
+				if ($_SESSION['timeout'] + 30 * 60 < time()){
+					session_destroy();
+				}
+			}
+			else {
+				# Initialize variables
+				$_SESSION['user']="";
+				$_SESSION['pass']="";
+				$_SESSION['dbUser']="";
+				$_SESSION['dbPass']="";
+				$_SESSION['dbAdmin']="";
+				$_SESSION['timeout']=time();
+			}
+
+			# Store POST data in session variables
+			if (isset($_POST["username"])) {	
+				$_SESSION['user']=$_POST['username'];
+				$_SESSION['pass']=md5($_POST['password']);
+			}
 			
 			global $db;
 			
@@ -53,20 +77,19 @@
 			pdo_open_read();
 			
 			//look for username filled out in form
-			$stmt = $db->query('SELECT * FROM users WHERE username = "'.$username.'"');
+			$stmt = $db->query('SELECT * FROM users WHERE username = "'.$_SESSION['user'].'"');
 		
 			//store all queried values as an associative array
 			$userResult = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			
 			//store username and hashed password
-			$dbUser = $userResult[0]['username'];
-			$dbPassword = $userResult[0]['password'];
-			$dbAdmin = $userResult[0]['admin'];
+			$_SESSION['dbUser'] = $userResult[0]['username'];
+			$_SESSION['dbPass'] = $userResult[0]['password'];
+			$_SESSION['dbAdmin'] = $userResult[0]['admin'];
 			
 			//check to see if form username and password match database and if user is an admin
-			if ($username == $dbUser && $dbAdmin == 1 && $password == $dbPassword) {
-				$path = $_SERVER['DOCUMENT_ROOT']."/admin/content.php";
-				include_once($path);
+			if ($_SESSION['user'] == $_SESSION['dbUser'] && $_SESSION['dbAdmin'] && $_SESSION['pass'] == $_SESSION['dbPass']) {
+				header('location: /admin/panel/index.php');
 			} else {
 				echo "
 				<div class='container log-in thumbnail'>
