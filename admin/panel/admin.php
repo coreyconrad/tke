@@ -57,6 +57,13 @@
 				include_once($path);
 				
 				echo "</div>";
+				
+				echo "<div class='container wrapper'>";
+				
+				$path = $_SERVER['DOCUMENT_ROOT']."/include/password.php";
+				include_once($path);
+				
+				echo "</div>";
 
 				//include footer
 				$path = $_SERVER['DOCUMENT_ROOT']."/include/footer.html";

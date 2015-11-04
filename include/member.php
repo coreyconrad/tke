@@ -15,82 +15,82 @@ $IDImgResults = $stmtMemberIdImg->fetchAll(PDO::FETCH_ASSOC);
 
 //function to display form, $e variable is to display error messages at the top
 function addMemberForm ($msg) {
-	
-//get the database query results as global variables
-global $userResults;
-global $memPosResults;
-global $IDImgResults;
+		
+	//get the database query results as global variables
+	global $userResults;
+	global $memPosResults;
+	global $IDImgResults;
 
-echo "<!-- Add/edit member data for existing user -->
-		<div class='row thumbnail'>
-			<h1 class='text-center'>Edit member data for existing users</h1>".
-			$msg."
-			<form class='form-horizontal admin' role='form' method='post' action='/admin/panel/admin.php' enctype='multipart/form-data'>
-				<div class='form-group'>
-					<label for='member' class='col-sm-2 control-label'>Member</label>
-					<div class='col-sm-10'>
-						<select name= 'member' class='form-control'>";
+	echo "<!-- Add/edit member data for existing user -->
+			<div class='row thumbnail'>
+				<h1 class='text-center'>Edit member data for existing users</h1>".
+				$msg."
+				<form class='form-horizontal admin' role='form' method='post' action='/admin/panel/admin.php' enctype='multipart/form-data'>
+					<div class='form-group'>
+						<label for='member' class='col-sm-2 control-label'>Member</label>
+						<div class='col-sm-10'>
+							<select name= 'member' class='form-control'>";
 
-foreach ($userResults as $row) {
-	$firstName = $row['first_name'];
-	$lastName = $row['last_name'];
-	$username = $row['username'];
-	
-	echo '<option value='.$username.'>'.$firstName.' '.$lastName.'</option>';
-}	
+	foreach ($userResults as $row) {
+		$firstName = $row['first_name'];
+		$lastName = $row['last_name'];
+		$username = $row['username'];
+		
+		echo '<option value='.$username.'>'.$firstName.' '.$lastName.'</option>';
+	}	
 
-echo "
+	echo "
+							</select>
+						</div>
+					</div>
+					<div class='form-group'>
+						<label for='position' class='col-sm-2 control-label'>Position</label>
+						<div class='col-sm-10'>
+							<select name='position' class='form-control'>
+								<option value='---'>---</option>";	
+
+	foreach ($memPosResults as $row) {
+		$position = $row['position'];
+		
+		echo '<option value='.$position.'>'.$position.'</option>';
+	}
+
+	echo "
 						</select>
 					</div>
 				</div>
 				<div class='form-group'>
-					<label for='position' class='col-sm-2 control-label'>Position</label>
+					<label for='newposition' class='col-sm-2 control-label'>New Position</label>
 					<div class='col-sm-10'>
-						<select name='position' class='form-control'>
-							<option value='---'>---</option>";	
-
-foreach ($memPosResults as $row) {
-	$position = $row['position'];
-	
-	echo '<option value='.$position.'>'.$position.'</option>';
-}
-
-echo "
-					</select>
+						<input type='text' class='form-control' id='newposition' name='newposition' placeholder='New position'>
+					</div>
 				</div>
-			</div>
-			<div class='form-group'>
-				<label for='newposition' class='col-sm-2 control-label'>New Position</label>
-				<div class='col-sm-10'>
-					<input type='text' class='form-control' id='newposition' name='newposition' placeholder='New position'>
+				<div class='form-group'>
+					<label for='scroll' class='col-sm-2 control-label'>Scroll #</label>
+					<div class='col-sm-10'>
+						<!-- We should look into crating the default value of the value tag the lowest current scroll# -->
+						<input type='number' class='form-control' id='scroll' name='scroll' placeholder='###' value=''>
+					</div>
 				</div>
-			</div>
-			<div class='form-group'>
-				<label for='scroll' class='col-sm-2 control-label'>Scroll #</label>
-				<div class='col-sm-10'>
-					<!-- We should look into crating the default value of the value tag the lowest current scroll# -->
-					<input type='number' class='form-control' id='scroll' name='scroll' placeholder='###' value=''>
+				<div class='form-group'>
+					<label for='blurb' class='col-sm-2 control-label'>Blurb</label>
+					<div class='col-sm-10'>
+						<textarea class='form-control' rows='4' name='blurb'></textarea>
+					</div>
 				</div>
-			</div>
-			<div class='form-group'>
-				<label for='blurb' class='col-sm-2 control-label'>Blurb</label>
-				<div class='col-sm-10'>
-					<textarea class='form-control' rows='4' name='blurb'></textarea>
+				<div class='form-group'>
+					<label for='member_img' class='col-sm-2 control-label'>Member Image</label>
+					<div class='col-sm-10'>
+						<input type='file' name='fileToUpload' id='fileToUpload'>
+					</div>
 				</div>
-			</div>
-			<div class='form-group'>
-				<label for='member_img' class='col-sm-2 control-label'>Member Image</label>
-				<div class='col-sm-10'>
-					<input type='file' name='fileToUpload' id='fileToUpload'>
+				<div class='form-group'>
+					<div class='col-sm-10 col-sm-offset-2'>
+						<input id='submit-member' name='submit-member' type='submit' value='Edit Member' class='btn btn-primary'>
+					</div>
 				</div>
-			</div>
-			<div class='form-group'>
-				<div class='col-sm-10 col-sm-offset-2'>
-					<input id='submit-member' name='submit-member' type='submit' value='Edit Member' class='btn btn-primary'>
-				</div>
-			</div>
-		</form>
-	</div>";						
+			</form>
+		</div>";						
 };
 
 if(isset($_POST['submit-member']) && $_SESSION['dbAdmin']) {
